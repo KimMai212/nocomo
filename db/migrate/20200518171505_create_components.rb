@@ -3,7 +3,7 @@ class CreateComponents < ActiveRecord::Migration[6.0]
     create_table :components do |t|
       t.string :name
       t.string :kind
-      t.string :html
+      t.text :html
 
       t.timestamps
     end

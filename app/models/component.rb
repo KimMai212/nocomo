@@ -1,4 +1,5 @@
 class Component < ApplicationRecord
-    belongs_to :placeholder
-    has_many :component_styles
+  has_many :placeholders
+  has_many :component_styles
+  has_many :styles, through: :component_styles
 end
