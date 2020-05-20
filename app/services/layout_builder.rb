@@ -1,24 +1,43 @@
 class LayoutBuilder
-  def initialize(layout)
-    @layout = layout
+  def initialize(project)
+    @project = project
   end
 
+  # def build
+  #   components_order = ""
+  #   # TODO: Actually concatenate in right order
+  #   @layout.components.each do |c|
+  #     components_order << ComponentBuilder.new(c).build
+  #   end
+  #   html = <<~HTML
+  #     <head>
+  #       <meta charset="UTF-8">
+  #       <title>Document</title>
+  #       #{StyleBuilder.new(@layout).build}
+  #     </head>
+  #     <body>
+  #       #{components_order}
+  #     </body>
+  #   HTML
+  #   html
+  # end
+
   def build
-    components_order = ""
-    # TODO: Actually concatenate in right order
-    @layout.components.each do |c|
-      components_order << ComponentBuilder.new(c).build
+    html = @project.layout.html
+    @project.placeholders.each do |ph|
+      html.gsub!("{{{#{ph.name}}}}", ph.value)
     end
-    html = <<~HTML
+    final_html = <<~HTML
       <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        #{StyleBuilder.new(@layout).build}
+        #{StyleBuilder.new(@project).build}
       </head>
       <body>
-        #{components_order}
+        #{html}
       </body>
     HTML
-    html
+    final_html
+    binding.pry
   end
 end

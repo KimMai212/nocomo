@@ -1,12 +1,15 @@
-Style.destroy_all
+# Style.destroy_all
+
+Project.destroy_all
 Layout.destroy_all
 
-blog = Layout.create!(
-  name: "Influencer's blog"
-)
+# blog = Layout.create!(
+#   name: "Influencer's blog"
+# )
 
 Placeholder.destroy_all
-Component.destroy_all
+# Component.destroy_all
+leon = User.last
 
 html = <<~HTML
   <div>
@@ -15,21 +18,11 @@ html = <<~HTML
   </div>
 HTML
 
-h1 = Component.create!(
+h1 = Layout.create!(
   name: "h1",
-  kind: "main_heading",
   html: html
 )
 
-h1.placeholders.create!(
-  name: "heading_text",
-  value: "Influencer's Little Blog"
-)
-
-h1.placeholders.create!(
-  name: "heading_date",
-  value: "May 11, 2011"
-)
 
 # Create style
 
@@ -39,11 +32,49 @@ css = <<~CSS
   }
 CSS
 
-blog.styles.create!(
-  name: "big_red_heading",
+dark_design = Design.create!(
+  name: "dark_design",
   css: css,
-  order: 0
 )
 
-style = blog.styles.first
-style.components << h1
+#  Create Color
+color_css = <<~CSS
+  p {
+    color: black;
+  }
+CSS
+
+color = Color.create!(
+  name: "dark_design",
+  css: color_css,
+)
+
+
+
+font = Font.create!(
+  paragraph: "Varela Round",
+  heading: "Lato",
+)
+
+project = Project.new
+project.design = dark_design
+project.layout = h1
+project.user = leon
+project.color = color
+project.font = font
+project.save!
+
+project.placeholders.create!(
+  name: "heading_date",
+  value: "May 11, 2011"
+)
+
+
+
+
+
+# style = blog.styles.first
+# style.components << h1
+
+
+
