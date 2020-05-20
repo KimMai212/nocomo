@@ -1,13 +1,14 @@
 class StyleBuilder
-  def initialize(layout)
-    @layout = layout
+  def initialize(project)
+    @project = project
   end
 
   def build
     html = "<style>"
-    @layout.styles.each do |style|
-      html += style.css + "\n"
-    end
+    html += @project.design.css + "\n"
+    # still to do font heading and paragraph overwrite
+    # html += @project.font.heading + "\n"
+    # still to do colors
     html += "</style>"
     html
   end
