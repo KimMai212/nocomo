@@ -1,0 +1,327 @@
+<html>
+
+<head>
+  <style>
+    /* Main styling */
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    nav {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      background-color: #49a;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      width: 100%;
+      margin: 60px 0 0;
+      text-align: center;
+      color: #fff;
+      background-color: #49a;
+      padding: 50px 0;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+
+    /* Banner */
+    .banner {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+    }
+
+    .banner h1 {
+      margin: 0;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* Main Heading */
+    .main-heading {
+      color: #000;
+      text-align: center;
+      font-size: 48px;
+      line-height: 1.2;
+    }
+
+    /* Paragraph */
+    .paragraph {
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    /* Button */
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #49a;
+      border-color: #49a;
+      border-radius: 2px;
+      text-decoration: none;
+      color: #fff;
+      transition: all .3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #278;
+    }
+
+    /* Cards */
+    .card-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .card-wrapper .card {
+      margin: 15px;
+    }
+
+    .card-wrapper .card:first-child {
+      margin-left: 0;
+    }
+
+    .card-wrapper .card:last-child {
+      margin-right: 0;
+    }
+
+    .card {
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px;
+    }
+
+    .card img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.4;
+      opacity: .7;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
+
+    .card .card-product-infos {
+      padding: 10px 20px 20px;
+    }
+
+    .banner-title {
+      margin-top: auto;
+      margin-left: auto;
+      margin-bottom: 50px;
+    }
+
+    .middle-cards {
+      display: flex;
+      height: 300px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .middle-image {
+      height: 100%;
+      width: 100%
+    }
+
+    .card-middle-big {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .card-middle-right {
+      justify-content: space-between;
+    }
+
+    .card-middle {
+      max-height: 120px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="{{{logo_url}}}" class="logo">
+  </nav>
+  <div class="banner"
+    style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+    <div class="col-3 banner-title">
+      <h1>Get the newest shit!</h1>
+      <a href="#" class="btn">Shop now!</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="col-6">
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="main-heading">{{{main_heading}}}</h1>
+  <div class="middle-cards">
+    <div class="card-middle-big">
+      <img class="middle-image" src="https://source.unsplash.com/random/200x200" />
+    </div>
+    <div class="card-middle-big card-middle-right">
+      <div class="card-middle">
+        <img class="middle-image" src="https://source.unsplash.com/random/200x200" />
+      </div>
+      <div class="card-middle">
+        <img class="middle-image" src="https://source.unsplash.com/random/200x200" />
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <h1 class="main-heading">{{{main_heading}}}</h1>
+  <div class="main">
+    <div class="col-6">
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="col-6">
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x200" />
+        <div class="card-product-infos">
+          <h3>This is a card</h3>
+          <p>Product</p>
+          <p>9.99 $</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Made with something, somewhere</p>
+  </footer>
+</body>
+
+</html>
