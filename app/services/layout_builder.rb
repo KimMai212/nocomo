@@ -38,6 +38,5 @@ class LayoutBuilder
       </body>
     HTML
     final_html
-    binding.pry
   end
 end
