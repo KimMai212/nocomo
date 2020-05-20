@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_174006) do
   create_table "components", force: :cascade do |t|
     t.string "name"
     t.string "kind"
-    t.string "html"
+    t.text "html"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_174006) do
 
   create_table "styles", force: :cascade do |t|
     t.string "name"
-    t.string "css"
+    t.text "css"
     t.integer "order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
