@@ -1,19 +1,27 @@
 <div class="container mt-5">
   <h1>Create your new project!</h1>
   <div class="row">
-    <div class="col-sm-12 col-md-5">
-      <%= simple_form_for(@project) do |f| %>
+    <div class="col-sm-12 col-md-4">
+      <%= simple_form_for @project, :html => { class: "project-form", remote: true } do |f| %>
         <%= f.input :logo, as: :file %>
         <%= f.input :layout_id, collection: Layout.all %>
         <%= f.input :design_id, collection: Design.all %>
         <%= f.input :color_id, collection: Color.all %>
-        <%= f.input :font_id, collection: Font.all %>
+        <%= f.input :font_id, collection: @fonts %>
         <%= f.submit %>
       <% end %>
+
     </div>
-    <div class="col-sm-12 col-md-7">
-      <iframe src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-    
-      </div>
+    <div class="col-sm-12 col-md-8">
+      <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
+    </div>
   </div>
 </div>
+
+<script>
+  window.onload = () => {
+    const iframe = document.querySelector("iframe");
+    const height = iframe.contentDocument.documentElement.clientHeight;
+    iframe.style.height = height + 2 + "px";
+  }
+</script>
