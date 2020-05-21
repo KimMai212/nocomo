@@ -3,10 +3,11 @@
   <div class="row">
     <div class="col-sm-12 col-md-4">
       <%= simple_form_for @project, :html => { class: "project-form", remote: true } do |f| %>
+        <%= f.input :logo, as: :file %>
         <%= f.input :layout_id, collection: Layout.all %>
-        <%= f.input :design, collection: Design.all %>
-        <%= f.input :color, collection: Color.all %>
-        <%= f.input :font, collection: @fonts %>
+        <%= f.input :design_id, collection: Design.all %>
+        <%= f.input :color_id, collection: Color.all %>
+        <%= f.input :font_id, collection: @fonts %>
         <%= f.submit %>
       <% end %>
 
@@ -23,19 +24,4 @@
     const height = iframe.contentDocument.documentElement.clientHeight;
     iframe.style.height = height + 2 + "px";
   }
-</script>
-<script>
-
-    fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCvbDy-yR6a4BCd6OblDf4BIR9Yzb_PHz8&sort=popularity")
-      .then(response => response.json())
-      .then((data) => {
-        let i = 0;
-        data.items.forEach((item) => {
-          if(i < 15) {
-            console.log(item.family);
-          }
-          i += 1;
-        });
-        console.log(data.items);
-      });
 </script>

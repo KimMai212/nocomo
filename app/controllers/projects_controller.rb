@@ -25,6 +25,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:layout, :design, :font, :color, :placeholder)
+    params.require(:project).permit(:id, :logo, :layout_id, :design_id, :font_id, :color_id, :placeholder_id)
   end
 end
