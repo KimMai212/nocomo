@@ -1,20 +1,17 @@
 <div class="container mt-5">
-  <h1>Create your new landing page!</h1>
+  <h1>Create your new project!</h1>
   <div class="row">
-    <div class="col-5 col-sm-12 col-md-5">
-      <div class="panel">
-       <%= simple_form_for(@project) do |f| %>
-          <%= f.input :layout, collection: Layout.all %>
-
-          <%= f.submit %>
-        <% end %>
-      </div>
+    <div class="col-sm-12 col-md-5">
+      <%= simple_form_for(@new) do |f| %>
+        <%= f.input :layout, collection: Layout.all %>
+        <%= f.input :design, collection: Design.all %>
+        <%= f.input :color, collection: Color.all %>
+        <%= f.input :font, collection: Font.all %>
+        <%= f.submit %>
+      <% end %>
     </div>
-    <div class="col-7 col-sm-12 col-md-7">
-      <div class="iframe">
-        <iframe src="<%= project_layouts_path(@project) %>" frameborder="0"></iframe>
-        <p>Test</p>
-      </div>
+    <div class="col-sm-12 col-md-7">
+      <iframe src="<%= preview_path(@project) %>" frameborder="0"></iframe>
     </div>
   </div>
 </div>
