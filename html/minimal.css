@@ -1,0 +1,134 @@
+:root {
+  --primary: #000;
+  --secondary: #666;
+  --secondary-light: #aaa;
+  --white: #fff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+nav {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--white);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+}
+
+.main {
+  max-width: auto;
+  margin: auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: 150px auto;
+  padding: 0 50px;
+}
+
+footer {
+  width: 100%;
+  margin: 60px 0 0;
+  text-align: center;
+  color: var(--primary);
+  background-color: var(--white);
+  padding: 50px 0;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+/* Banner */
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 50px;
+  background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(https://source.unsplash.com/random);
+}
+.banner h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Main Heading */
+.main-heading {
+ color: var(--primary);
+ text-align: center;
+ font-size: 48px;
+ line-height: 1.2;
+}
+
+/* Paragraph */
+.paragraph {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Button */
+
+.btn {
+  padding: 20px 60px;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  text-decoration: none;
+  color: var(--white);
+  transition: all .3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--secondary-light);
+}
+
+/* Cards */
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-wrapper .card {
+  margin: 10px;
+}
+
+.card-wrapper .card:first-child {
+  margin-left: 0;
+}
+
+.card-wrapper .card:last-child {
+  margin-right: 0;
+}
+
+.card {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.center,
+.btn-wrap {
+  margin: auto;
+  text-align: center;
+}
