@@ -1,3 +1,3 @@
 class Placeholder < ApplicationRecord
-    belongs_to :component
+  belongs_to :project
 end

@@ -5,12 +5,13 @@
       body {
         padding: 0;
         margin: 0;
+
       }
       nav {
         width: 100%;
         padding: 10px 0;
         text-align: center;
-        background-color: #49a;
+        background-color:lightgrey;
         height: 40px;
         display: flex;
         justify-content: center;
@@ -25,8 +26,8 @@
         width: 100%;
         margin: 60px 0 0;
         text-align: center;
-        color: #fff;
-        background-color: #49a;
+        color: #FFFFFF  ;
+        background-color: lightgrey;
         padding: 50px 0;
       }
 
@@ -38,7 +39,7 @@
       .banner {
         background-size: cover;
         background-position: center;
-        padding: 150px 50px;
+        padding: 200px 50px;
       }
       .banner h1 {
         margin: 0;
@@ -68,17 +69,20 @@
       .btn {
         margin: 20px;
         padding: 10px 20px;
-        background-color: #49a;
-        border-color: #49a;
+        background-color: #8d99ae;
+          border-color: lightgrey
         border-radius: 2px;
         text-decoration: none;
-        color: #fff;
+        color: black;
         transition: all .3s;
         display: inline-block;
+        opacity: 0.4;
       }
 
       .btn:hover {
-        background-color: #278;
+        background-color: #edf2f4;
+        opacity: 100%;
+
       }
 
       /* Cards */
@@ -99,12 +103,16 @@
 
       .card {
         overflow: hidden;
-        background: white;
+        background: #edf2f4;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         display: flex;
         flex-direction: column;
         align-items: center;
         max-width: 300px;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
       }
 
       .card img {
@@ -137,9 +145,10 @@
       }
 
       .big-card {
+
         margin-top: 50px;
         overflow: hidden;
-        background: white;
+        background: #edf2f4;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         display: flex;
         flex-direction: column;
@@ -154,16 +163,31 @@
         object-fit: cover;
       }
 
+
+      .big-card:hover {
+        transform: scale(1.1);
+      }
+
+
       .card-bottom {
         overflow: hidden;
-        background: white;
+        background: #edf2f4;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         display: flex;
         flex-direction: row;
         align-items: center;
         max-width: 100%;
-        max-height: 200px;
+        max-height: 250px;
         margin-top: 30px;
+      }
+
+      .card-bottom-product-infos {
+        padding-left: 20px;
+
+      }
+
+      .card-bottom:hover {
+        transform: scale(1.1);
       }
      </style>
  </head>
@@ -182,7 +206,6 @@
       <h1 class="main-heading">{{{main_heading}}}</h1>
 
       <div class="col-6">
-        <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
       </div>
 
       <div class="card-wrapper">
@@ -192,7 +215,7 @@
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
           </div>
-            <a href="#" class="btn">Read!</a>
+            <a href="#" class="btn">Read more</a>
         </div>
         <div class="card">
           <img src="https://source.unsplash.com/random/200x200" />
@@ -200,7 +223,7 @@
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
           </div>
-            <a href="#" class="btn">Read!</a>
+            <a href="#" class="btn">Read more</a>
         </div>
         <div class="card">
           <img src="https://source.unsplash.com/random/200x200" />
@@ -208,7 +231,7 @@
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
           </div>
-           <a href="#" class="btn">Read!</a>
+           <a href="#" class="btn">Read more</a>
         </div>
       </div>
     </div>
@@ -219,34 +242,34 @@
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
           </div>
-            <a href="#" class="btn">Read!</a>
+            <a href="#" class="btn">Read more</a>
         </div>
 
-    <hr style="background: #333; border: none; color: #333; height: 2px; width: 100%; margin-top: 60px; margin-bottom: 60px">
+    <hr style="background: #333; border: none; color: #333; height: 1px; width: 100%; margin-top: 60px; margin-bottom: 60px">
 
       <div class="long-cards">
         <div class="card-bottom">
           <img src="https://source.unsplash.com/random/200x200" />
-          <div class="card-product-infos">
+          <div class="card-bottom-product-infos">
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
-            <a href="#" class="btn">Read!</a>
+            <a href="#" class="btn">Read more</a>
           </div>
         </div>
         <div class="card-bottom">
           <img src="https://source.unsplash.com/random/200x200" />
-          <div class="card-product-infos">
+          <div class="card-bottom-product-infos">
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
-            <a href="#" class="btn">Read!</a>
+            <a href="#" class="btn">Read more</a>
           </div>
         </div>
         <div class="card-bottom">
           <img src="https://source.unsplash.com/random/200x200" />
-          <div class="card-product-infos">
+          <div class="card-bottom-product-infos">
             <h3>This is a card</h3>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
-             <a href="#" class="btn">Read!</a>
+             <a href="#" class="btn">Read more</a>
           </div>
         </div>
       </div>
