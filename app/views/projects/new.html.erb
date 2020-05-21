@@ -2,16 +2,18 @@
   <h1>Create your new project!</h1>
   <div class="row">
     <div class="col-sm-12 col-md-5">
-      <%= simple_form_for(@new) do |f| %>
-        <%= f.input :layout, collection: Layout.all %>
-        <%= f.input :design, collection: Design.all %>
-        <%= f.input :color, collection: Color.all %>
-        <%= f.input :font, collection: Font.all %>
+      <%= simple_form_for(@project) do |f| %>
+        <%= f.input :logo, as: :file %>
+        <%= f.input :layout_id, collection: Layout.all %>
+        <%= f.input :design_id, collection: Design.all %>
+        <%= f.input :color_id, collection: Color.all %>
+        <%= f.input :font_id, collection: Font.all %>
         <%= f.submit %>
       <% end %>
     </div>
     <div class="col-sm-12 col-md-7">
       <iframe src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-    </div>
+    
+      </div>
   </div>
 </div>

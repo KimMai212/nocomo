@@ -5,4 +5,5 @@ class Project < ApplicationRecord
   belongs_to :font
   belongs_to :user
   has_many :placeholders
+  has_one_attached :logo
 end
