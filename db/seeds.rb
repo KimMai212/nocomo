@@ -1,15 +1,25 @@
-# Style.destroy_all
-
-Project.destroy_all
-Layout.destroy_all
-
-# blog = Layout.create!(
-#   name: "Influencer's blog"
-# )
+puts " Starting off with a clean slate, Cleaning database of all records"
 
 Placeholder.destroy_all
-# Component.destroy_all
-leon = User.new(email: "test@test.de", password: "123456")
+Project.destroy_all
+Layout.destroy_all
+Color.destroy_all
+Design.destroy_all
+Font.destroy_all
+User.destroy_all
+
+# ---------------------------------------------------
+#  Initialize Project
+puts "Initializing a new Project"
+project = Project.new
+
+# ---------------------------------------------------
+#  Create User
+puts "Assining a user to the project"
+user = User.create(email: "peter@lustig.org", password: "123456")
+project.user = user
+# ---------------------------------------------------
+#  Create Layout
 
 html = <<~HTML
   <nav>
@@ -74,14 +84,16 @@ html = <<~HTML
     </footer>
 HTML
 
+
+puts "Assining a layout to the project"
 business = Layout.create!(
   name: "business",
   html: html
 )
+project.layout = business
 
-
-# Create style
-
+# ---------------------------------------------------
+#  Create Design
 css = <<~CSS
   /* Main styling */
       body {
@@ -234,49 +246,52 @@ css = <<~CSS
       }
 CSS
 
+
+puts "Assining a design to the project"
 business_design = Design.create!(
   name: "business_design",
   css: css,
 )
+project.design = business_design
 
+# ---------------------------------------------------
 #  Create Color
+
 color_css = <<~CSS
   p {
     color: black;
   }
 CSS
-
+puts "Assining a color to the project"
 color = Color.create!(
   name: "dark_design",
   css: color_css,
 )
+project.color = color
 
-
+# ---------------------------------------------------
+#  Create Font
+puts "Assining a font to the project"
 
 font = Font.create!(
   paragraph: "Varela Round",
   heading: "Lato",
 )
-
-project = Project.new
-project.design = dark_design
-project.layout = h1
-project.user = leon
-project.color = color
 project.font = font
-project.save!
 
-project.placeholders.create!(
+# ---------------------------------------------------
+#  Create Placeholder
+puts "Assining a placeholder to the project"
+
+placeholder = Placeholder.new(
   name: "heading_date",
   value: "May 11, 2011"
 )
+placeholder.project = project
+placeholder.save!
 
+# ---------------------------------------------------
 
-
-
-
-# style = blog.styles.first
-# style.components << h1
-
-
+project.save!
+puts "Project has been saved"
 
