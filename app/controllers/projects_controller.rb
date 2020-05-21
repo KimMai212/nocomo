@@ -16,13 +16,13 @@ class ProjectsController < ApplicationController
     @project = Project.find(params["id"])
     @project.update(layout_id: project_params[:layout_id])
     @project.update(design_id: project_params[:design_id])
-    @project.update(design_id: project_params[:design_id])
+    @project.update(color_id: project_params[:color_id])
 
     font = Font.find_by(heading: font_params[:heading], paragraph: font_params[:paragraph])
     if font.nil?
       font = Font.create(heading: font_params[:heading], paragraph: font_params[:paragraph])
     end
-      @project.update(font_id: font.id)
+    @project.update(font_id: font.id)
 
     redirect_to generate_path(project_id: @project.id)
     #raise
