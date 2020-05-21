@@ -21,7 +21,8 @@ class StyleBuilder
       h1, h2, h3, h4, h5 {
         font-family: #{heading};
       }
-      p {
+      p,
+      .btn {
         font-family: #{paragraph};
       }
     CSS
