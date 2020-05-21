@@ -1,17 +1,41 @@
 <div class="container mt-5">
   <h1>Create your new project!</h1>
   <div class="row">
-    <div class="col-sm-12 col-md-5">
-      <%= simple_form_for(@new) do |f| %>
-        <%= f.input :layout, collection: Layout.all %>
+    <div class="col-sm-12 col-md-4">
+      <%= simple_form_for @project, :html => { class: "project-form", remote: true } do |f| %>
+        <%= f.input :layout_id, collection: Layout.all %>
         <%= f.input :design, collection: Design.all %>
         <%= f.input :color, collection: Color.all %>
-        <%= f.input :font, collection: Font.all %>
+        <%= f.input :font, collection: @fonts %>
         <%= f.submit %>
       <% end %>
+
     </div>
-    <div class="col-sm-12 col-md-7">
-      <iframe src="<%= preview_path(@project) %>" frameborder="0"></iframe>
+    <div class="col-sm-12 col-md-8">
+      <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
     </div>
   </div>
 </div>
+
+<script>
+  window.onload = () => {
+    const iframe = document.querySelector("iframe");
+    const height = iframe.contentDocument.documentElement.clientHeight;
+    iframe.style.height = height + 2 + "px";
+  }
+</script>
+<script>
+
+    fetch("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCvbDy-yR6a4BCd6OblDf4BIR9Yzb_PHz8&sort=popularity")
+      .then(response => response.json())
+      .then((data) => {
+        let i = 0;
+        data.items.forEach((item) => {
+          if(i < 15) {
+            console.log(item.family);
+          }
+          i += 1;
+        });
+        console.log(data.items);
+      });
+</script>

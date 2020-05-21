@@ -1,9 +1,19 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[new preview]
+  skip_before_action :authenticate_user!, only: %i[new update preview]
+  skip_before_action :verify_authenticity_token, only: :update
 
   def new
-    @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: User.first.id, font_id: Font.first.id)
-    @new = Project.new
+    if params[:project_id].present?
+      @project = Project.find(params[:project_id])
+    else
+      @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: User.first.id, font_id: Font.first.id)
+    end
+    @fonts = FontList.list
+  end
+
+  def update
+    @project = Project.find(params["id"])
+    redirect_to generate_path(project_id: @project.id)
   end
 
   def preview
