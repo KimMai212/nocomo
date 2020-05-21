@@ -31,8 +31,8 @@
 
 
       .main {
-        max-width: 900px;
-        margin: auto;
+     /*   max-width: 900px;
+        margin: auto;*/
         font-family: sans-serif;
       }
 
@@ -40,9 +40,17 @@
         width: 100%;
         margin: 60px 0 0;
         text-align: center;
-        color: white;
-        background-color: #191919;
+        color: #E54300;
+        background-color: #000000;
         padding: 50px 0;
+        font-size: 24px;
+
+       footer p {
+
+        font-size: 24px;
+        }
+
+
       }
 
       .col-6 {
@@ -57,6 +65,7 @@
         margin-top: -60px;
         font-family: sans-serif;
       }
+
       .banner h1 {
         margin: 0;
         color: white;
@@ -73,7 +82,7 @@
         font-size: 32px;
         line-height: 1.2;
         font-family: sans-serif;
-        margin-top: 48px;
+        margin-top: 78px;
       }
 
       /* Paragraph */
@@ -88,6 +97,7 @@
         margin-right: auto;
         margin-left: auto;
         background-color: #A9A49C;
+        border-radius: 4px;
       }
       .btn {
         padding: 10px 20px;
@@ -98,12 +108,15 @@
         color: white;
         transition: all .3s;
         display: inline-block;
-        background-color: #A9A49C;
+        background-color: #E54300;
+        border-radius: 8px;
+        margin-top: 18px;
 
       }
 
       .btn:hover {
-        background-color: #E54300;
+        background-color: #A9A49C;
+        opacity: 6;
       }
 
       /* Cards */
@@ -112,8 +125,10 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
-        padding: 4px;
+        padding: 0px;
         border-radius: 6px;
+        margin-right: 48px;
+        margin-left: 48px;
 
       }
 
@@ -133,6 +148,7 @@
         object-fit: cover;
         padding: 6px;
         border-radius: 6px;
+        margin: 12px;
       }
 
       .card {
@@ -141,10 +157,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        max-width: 700px;
-        margin: 88px;
-        background-color: #DBD5C9;
+        margin: 68px;
+   /*     background-color: #DBD5C9;*/
         border-radius: 3px;
+        margin-bottom: 140px;
 
 
       }
@@ -181,6 +197,8 @@
         font-size: 24px;
         font-weight: bold;
         margin: 0;
+        font-weight: 700;
+
       }
 
       .card p {
@@ -190,11 +208,25 @@
         margin-bottom: 0;
         margin-top: 8px;
         font-family: sans-serif;
+
       }
 
       .card .card-product-infos {
         padding: 20px 20px 20px;
+        font-weight: inherit;
+        vertical-align: baseline;
+        padding-left: 64px;
+        padding-right: 64px;
       }
+
+
+      img.upper-padding {
+        padding-top: 100px;
+      }
+      img.negative-margin {
+        margin-top: -80px;
+      }
+
     </style>
   </head>
   <body>
@@ -202,13 +234,14 @@
     <div>
       <nav>
         <img src="{{{logo_url}}}" class="logo">
-        <a href="#" class="btn">Click here!</a>
+       <!--  <a href="#" class="btn">Discover more!</a> -->
       </nav>
 
 
         <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
           <div class="container">
             <h1>Le Wagon brings creative people!</h1>
+            <a href="#" class="btn">Discover more!</a>
           </div>
 
       </div>
@@ -225,31 +258,36 @@
       <div class="card">
           <img src="https://source.unsplash.com/random/200x200" />
           <div class="card-product-infos">
-            <h3>This is a card</h3>
+            <h2>This is a card</h2>
             <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
+
           </div>
       </div>
     </div>
 
+    <div>
+        <h1 class="main-heading">{{{main_heading}}}</h1>
+    </div>
+
+
+
     <div class="card-wrapper">
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
+      <img src="https://source.unsplash.com/random/200x200" class="upper-padding"/>
+      <img src="https://source.unsplash.com/random/200x200" class="large"/>
+      <img src="https://source.unsplash.com/random/200x200" class="upper-padding"/>
     </div>
 
     <div class="card-wrapper">
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
+      <img src="https://source.unsplash.com/random/200x200" class="small"/>
+      <img src="https://source.unsplash.com/random/200x200" class="negative-margin"/>
+      <img src="https://source.unsplash.com/random/200x200" class="large"/>
     </div>
 
     <div class="card-wrapper">
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
-      <img src="https://source.unsplash.com/random/200x200" />
+      <img src="https://source.unsplash.com/random/200x200" class="middle"/>
+      <img src="https://source.unsplash.com/random/200x200" class="negative-margin"/>
+      <img src="https://source.unsplash.com/random/200x200" class="large"/>
     </div>
-
-<hr style=“background: #333; border: none; color: #333; height: 1px; width: 150%; margin-top: 60px; margin-bottom: 60px”>
 
     <div class="button-wrap">
           <a href="#" class="btn">Click here!</a>
@@ -258,6 +296,7 @@
     <div>
       <footer>
          <p>Made with something, somewhere</p>
+
       </footer>
     </div>
 
