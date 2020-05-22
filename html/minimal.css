@@ -48,8 +48,19 @@ footer {
   padding: 50px 0;
 }
 
+.row.flex {
+  display: flex;
+}
+
 .col-6 {
   width: 50%;
+}
+
+.col-6:first-child {
+  padding-right: 15px;
+}
+.col-6:last-child {
+  padding-left: 15px;
 }
 
 /* Banner */
@@ -58,6 +69,7 @@ footer {
   background-position: center;
   padding: 150px 50px;
   background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(https://source.unsplash.com/random);
+  text-align: center;
 }
 .banner h1 {
   margin: 0;
@@ -83,6 +95,11 @@ footer {
 
 /* Button */
 
+.btn-wrap {
+  margin: auto auto 100px;
+  text-align: center;
+}
+
 .btn {
   padding: 20px 60px;
   background-color: var(--secondary);
@@ -98,20 +115,35 @@ footer {
 }
 
 /* Cards */
-.card-wrapper {
+.card-wrapper-vertical {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.card-wrapper .card {
+.card-wrapper-vertical .column {
   margin: 10px;
 }
 
-.card-wrapper .card:first-child {
+.card-wrapper-vertical .column:first-child {
   margin-left: 0;
 }
 
+.card-wrapper-vertical .column:last-child {
+  margin-right: 0;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-wrapper .card {
+  margin: 15px;
+}
+.card-wrapper .card:first-child {
+  margin-left: 0;
+}
 .card-wrapper .card:last-child {
   margin-right: 0;
 }
@@ -127,8 +159,36 @@ footer {
   width: 100%;
 }
 
-.center,
-.btn-wrap {
+.center{
   margin: auto;
   text-align: center;
+}
+
+.card-long {
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 68px;
+  border-radius: 3px;
+  margin-bottom: 140px;
+}
+
+.card-long img {
+  height: 60%;
+  width: 60%;
+  object-fit: cover;
+}
+
+.card-long h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  font-weight: 700;
+}
+
+.card-long .card-product-infos {
+  padding: 20px 64px 20px;
+  vertical-align: baseline;
 }

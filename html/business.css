@@ -1,3 +1,11 @@
+:root {
+  --primary: #046865;
+  --secondary: #A13D63;
+  --secondary-light: #F7A278;
+  --white: #ffbe0b;
+  --dark: #333;
+}
+
 /* Main styling */
 body {
   padding: 0;
@@ -7,21 +15,16 @@ nav {
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  background-color: #49a;
+  background-color: var(--primary);
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#business nav div {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  text-align: left;
-}
 
 .logo {
   width: 40px;
+  color: var(--white);
 }
 
 .main {
@@ -34,12 +37,12 @@ footer {
   width: 100%;
   margin: 60px 0 0;
   text-align: center;
-  color: #fff;
-  background-color: #49a;
+  color: var(--white);
+  background-color: var(--primary);
   padding: 50px 0;
 }
 
-.row {
+.row.flex {
   display: flex;
 }
 
@@ -59,6 +62,8 @@ footer {
   background-position: center;
   padding: 150px 50px;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);
+  text-align: center;
+  border-radius: 3px;
 }
 .banner h1 {
   margin: 0;
@@ -70,10 +75,11 @@ footer {
 
 /* Main Heading */
 .main-heading {
-  color: #000;
+  color: var(--black);
   text-align: center;
   font-size: 48px;
   line-height: 1.2;
+  margin-top: 50px;
 }
 
 /* Paragraph */
@@ -85,29 +91,58 @@ footer {
 
 /* Button */
 
+.btn-wrap {
+  margin-bottom: 50px;
+}
+
 .btn {
   padding: 10px 20px;
-  background-color: #49a;
-  border-color: #49a;
+  background-color: var(--primary);
+  border-color: var(--primary);
   border-radius: 2px;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   transition: all .3s;
   display: inline-block;
 }
 
 .btn:hover {
-  background-color: #278;
+  background-color: var(--secondary);
 }
 
 /* Cards */
+.card-wrapper-vertical {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-wrapper-vertical .column {
+  margin: 10px;
+}
+
+.card-wrapper-vertical .column:first-child {
+  margin-left: 0;
+}
+
+.card-wrapper-vertical .column:last-child {
+  margin-right: 0;
+}
+
+.card-wrapper-vertical .card {
+  margin-bottom: 20px;
+}
+
+.card-wrapper-vertical img {
+  width: 100%;
+}
+
 .card-wrapper {
   display: flex;
   flex-direction: row;
 }
 
 .card-wrapper .card {
-  margin: 15px;
+  margin: 10px;
 }
 .card-wrapper .card:first-child {
   margin-left: 0;
@@ -116,36 +151,35 @@ footer {
   margin-right: 0;
 }
 
-.card {
+.card,
+.card-long {
   overflow: hidden;
-  background: white;
+  background: var(--secondary-light);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 300px;
+  border-radius: 3px;
 }
 
-.card img {
+.card-long {
+  flex-direction: row;
+  margin-bottom: 140px;
+  max-width: none;
+}
+
+.card-long img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.card h2 {
+.card-long h2 {
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
 }
 
-.card p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card .card-product-infos {
-  padding: 10px 20px 20px;
+.card-long .card-product-infos {
+  padding: 10px 64px 20px;
 }
