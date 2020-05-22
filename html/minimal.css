@@ -28,6 +28,11 @@ nav {
   width: 40px;
 }
 
+h3.logo {
+  width: auto;
+  color: var(--white);
+}
+
 .main {
   max-width: auto;
   margin: auto;

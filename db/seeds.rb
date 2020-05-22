@@ -85,6 +85,11 @@ Color.create!(
   css: File.read("html/awesome-color.css")
 )
 
+Color.create!(
+  name: "Minimal",
+  css: File.read("html/minimal-color.css")
+)
+
 puts "Assining a color to the project"
 bright_color = Color.create!(
   name: "Bright",
