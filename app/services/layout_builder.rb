@@ -3,25 +3,6 @@ class LayoutBuilder
     @project = project
   end
 
-  # def build
-  #   components_order = ""
-  #   # TODO: Actually concatenate in right order
-  #   @layout.components.each do |c|
-  #     components_order << ComponentBuilder.new(c).build
-  #   end
-  #   html = <<~HTML
-  #     <head>
-  #       <meta charset="UTF-8">
-  #       <title>Document</title>
-  #       #{StyleBuilder.new(@layout).build}
-  #     </head>
-  #     <body>
-  #       #{components_order}
-  #     </body>
-  #   HTML
-  #   html
-  # end
-
   def build
     html = @project.layout.html
     @project.placeholders.each do |ph|
@@ -37,6 +18,9 @@ class LayoutBuilder
         #{html}
       </body>
     HTML
+    unless @project.logo.nil?
+      final_html.gsub!(/^(<img src=").*(" class="logo">)$/, "<img src='#{@project.logo.key}' class='logo'")
+    end
     final_html
   end
 end

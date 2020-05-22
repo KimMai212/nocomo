@@ -9,6 +9,8 @@
 .navbar {
   background: white;
   height: 60px;
-  
 }
 
+.navbar-brand * {
+  margin-bottom: 0;
+}

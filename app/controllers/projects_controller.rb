@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params["id"])
+    @project.update(logo: project_params[:logo])
     @project.update(layout_id: project_params[:layout_id])
     @project.update(design_id: project_params[:design_id])
     @project.update(color_id: project_params[:color_id])
@@ -25,7 +26,7 @@ class ProjectsController < ApplicationController
     @project.update(font_id: font.id)
 
     redirect_to generate_path(project_id: @project.id)
-    #raise
+    raise
   end
 
   def preview
