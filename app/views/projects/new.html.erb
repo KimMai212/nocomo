@@ -11,6 +11,10 @@
         <div class="form-group select optional project_layout_id">
           <label class="select optional" for="project_layout_id">Layout</label>
           <select class="form-control is-valid select optional" name="project[layout_id]" id="project_layout_id">
+            <% unless @project.layout.nil? %>
+              <option value="<%= @project.layout.id %>"><%= @project.layout.name %></option>
+              <option value="0">------</option>
+            <% end %>
             <%= Layout.all.each do |f| %>
               <option value="<%= f.id %>"><%= f.name %></option>
             <% end %>
@@ -19,6 +23,10 @@
         <div class="form-group select optional project_design_id">
           <label class="select optional" for="project_design_id">Design</label>
           <select class="form-control is-valid select optional" name="project[design_id]" id="project_design_id">
+            <% unless @project.design.nil? %>
+              <option value="<%= @project.design.id %>"><%= @project.design.name %></option>
+              <option value="0">------</option>
+            <% end %>
             <%= Design.all.each do |f| %>
               <option value="<%= f.id %>"><%= f.name %></option>
             <% end %>

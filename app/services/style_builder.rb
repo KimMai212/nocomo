@@ -26,7 +26,7 @@ class StyleBuilder
         font-family: #{paragraph};
       }
     CSS
-    html += @project.colors.css
+    html += @project.color.css
     html += "</style>"
     html
   end

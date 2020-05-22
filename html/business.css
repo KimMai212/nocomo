@@ -24,6 +24,10 @@ nav {
 
 .logo {
   width: 40px;
+}
+
+h3.logo {
+  width: auto;
   color: var(--white);
 }
 
@@ -169,7 +173,8 @@ footer {
   max-width: none;
 }
 
-.card-long img {
+.card-long img,
+.card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -182,4 +187,8 @@ footer {
 
 .card-long .card-product-infos {
   padding: 10px 64px 20px;
+}
+
+.card .card-product-infos {
+  padding: 20px;
 }
