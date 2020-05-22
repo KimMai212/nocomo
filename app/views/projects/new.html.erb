@@ -1,7 +1,7 @@
 <div class="container mt-5">
-  <h1>Create your new project!</h1>
   <div class="row">
     <div class="col-sm-12 col-md-4">
+      <h2>Create your new project!</h2>
       <form class="simple_form project-form" id="edit_project_<%= @project.id %>" novalidate="novalidate" enctype="multipart/form-data" action="/projects/<%= @project.id %>" accept-charset="UTF-8" method="post">
         <input type="hidden" name="_method" value="patch">
         <div class="form-group file optional project_logo">

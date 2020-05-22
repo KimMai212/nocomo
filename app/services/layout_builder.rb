@@ -18,9 +18,9 @@ class LayoutBuilder
         #{html}
       </body>
     HTML
-    unless @project.logo.nil?
-      final_html.gsub!(/^(<img src=").*(" class="logo">)$/, "<img src='#{@project.logo.key}' class='logo'")
-    end
+    # unless @project.logo.nil?
+    #   final_html.gsub!(/^(<img src=").*(" class="logo">)$/, "<img src='#{@project.logo.key}' class='logo'")
+    # end
     final_html
   end
 end
