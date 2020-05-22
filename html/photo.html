@@ -57,12 +57,15 @@
       background-position: center;
       padding: 150px 50px;
       background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(https://source.unsplash.com/random);
+      size: 68px;
     }
+
     .banner h1 {
       margin: 0;
       color: var(--primary);
-      font-size: 32px;
+      font-size: 64px;
       font-weight: bold;
+      text-align: center;
     }
 
     /* Main Heading */
@@ -90,6 +93,7 @@
     color: var(--white);
     transition: all .3s;
     display: inline-block;
+    margin-top: 32px;
   }
 
   .btn:hover {
@@ -131,6 +135,68 @@
     margin: auto;
     text-align: center;
   }
+
+  .card-long {
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 68px;
+   /*     background-color: #DBD5C9;*/
+    border-radius: 3px;
+    margin-bottom: 140px;
+
+      }
+
+  .card-profle-long {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+    color: white;
+    background-color: #DBD5C9;
+    font-style: normal;
+    margin: 100px;
+
+      }
+
+    .card-long .card-product-infos-long {
+       /* padding: 20px 20px 20px;*/
+        font-weight: inherit;
+        vertical-align: baseline;
+        padding-left: 64px;
+
+     /*   margin: 64px;*/
+      }
+
+    .card-long p {
+        font-size: 16px;
+        line-height: 1.4;
+        opacity: .7;
+        margin-bottom: 36px;
+        margin-top: 8px;
+        font-family: sans-serif;
+
+      }
+
+      footer {
+        width: 100%;
+        margin: 60px 0 0;
+        text-align: center;
+        color: white;
+        background-color: #000000;
+        padding: 50px 0;
+        font-size: 24px;
+
+       footer p {
+
+        font-size: 24px;
+        }
+
 </style>
 </head>
 
@@ -147,12 +213,20 @@
     <div class="container">
       <h1 class="main-heading">{{{main_heading}}}</h1>
 
-      <div class="col-6 center">
-        <p class="paragraph">bla bla bla</p>
-        <div class="btn-wrap">
-          <a href="#" class="btn">Book me!</a>
-        </div>
+      <div>
+      <div class="card-long">
+          <img src="https://source.unsplash.com/random/400x400" />
+          <div class="card-product-infos-long">
+            <h2>This is a card</h2>
+            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
+            <!-- <div class="btn-wrap"> -->
+                <a href="#" class="btn">More insights</a>
+            <!-- </div> -->
+          </div>
       </div>
+    </div>
+
+
     </div>
 
     <div class="card-wrapper">
