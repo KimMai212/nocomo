@@ -1,49 +1,100 @@
-Style.destroy_all
-Layout.destroy_all
-
-blog = Layout.create!(
-  name: "Influencer's blog"
-)
+puts "Starting off with a clean slate, Cleaning database of all records"
 
 Placeholder.destroy_all
-Component.destroy_all
+Project.destroy_all
+Layout.destroy_all
+Color.destroy_all
+Design.destroy_all
+Font.destroy_all
+User.destroy_all
 
-html = <<~HTML
-  <div>
-    <div>{{{heading_date}}}</div>
-    <h1 class="heading_style">{{{heading_text}}}</h1>
-  </div>
-HTML
+# ---------------------------------------------------
+#  Initialize Project
+puts "Initializing a new Project"
+project = Project.new
 
-h1 = Component.create!(
-  name: "h1",
-  kind: "main_heading",
-  html: html
-)
+# ---------------------------------------------------
+#  Create User
+puts "Assigning a user to the project"
+user = User.create(email: "peter@lustig.org", password: "123456")
+project.user = user
+# ---------------------------------------------------
+#  Create Layout
 
-h1.placeholders.create!(
-  name: "heading_text",
-  value: "Influencer's Little Blog"
-)
 
-h1.placeholders.create!(
+puts "Assigning a layout to the project"
+business = Layout.create!(
+  name: "Business",
+  html: File.read("html/business-layout.html")
+  )
+project.layout = business
+
+
+shop = Layout.create!(
+  name: "Shop",
+  html: File.read("html/shop-layout.html")
+  )
+
+photo = Layout.create!(
+  name: "Photography",
+  html: File.read("html/photo-layout.html")
+  )
+
+# ---------------------------------------------------
+#  Create Design
+puts "Assigning a design to the project"
+business_design = Design.create!(
+  name: "Business",
+  css: File.read("html/business.css")
+  )
+project.design = business_design
+
+minimal_css = File.read("html/minimal.css")
+minimal_design = Design.create!(
+  name: "Minimal",
+  css: minimal_css
+  )
+
+
+
+# ---------------------------------------------------
+#  Create Color
+
+color_css = <<~CSS
+p {
+  color: black;
+}
+CSS
+puts "Assining a color to the project"
+color = Color.create!(
+  name: "dark_design",
+  css: color_css,
+  )
+project.color = color
+
+# ---------------------------------------------------
+#  Create Font
+puts "Assigning a font to the project"
+
+font = Font.create!(
+  paragraph: "Varela Round",
+  heading: "Lato",
+  )
+project.font = font
+
+# ---------------------------------------------------
+#  Create Placeholder
+puts "Assigning a placeholder to the project"
+
+placeholder = Placeholder.new(
   name: "heading_date",
   value: "May 11, 2011"
-)
+  )
+placeholder.project = project
+placeholder.save!
 
-# Create style
+# ---------------------------------------------------
 
-css = <<~CSS
-  .heading_style {
-    color: red;
-  }
-CSS
+project.save!
+puts "Project has been saved"
 
-blog.styles.create!(
-  name: "big_red_heading",
-  css: css,
-  order: 0
-)
-
-style = blog.styles.first
-style.components << h1

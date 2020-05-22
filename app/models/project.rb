@@ -1,4 +1,9 @@
 class Project < ApplicationRecord
-    belongs_to :user
-    belongs_to :layout
+  belongs_to :layout
+  belongs_to :color
+  belongs_to :design
+  belongs_to :font
+  belongs_to :user
+  has_many :placeholders
+  has_one_attached :logo
 end

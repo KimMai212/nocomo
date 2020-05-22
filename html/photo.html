@@ -1,0 +1,203 @@
+<html>
+<head>
+  <style>
+    /* Main styling */
+    :root {
+      --primary: #000;
+      --secondary: #666;
+      --secondary-light: #aaa;
+      --white: #fff;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--white);
+    }
+
+    nav {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      background-color: var(--white);
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      max-width: auto;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 150px auto;
+    }
+
+    footer {
+      width: 100%;
+      margin: 60px 0 0;
+      text-align: center;
+      color: var(--primary);
+      background-color: var(--white);
+      padding: 50px 0;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+
+    /* Banner */
+    .banner {
+      background-size: cover;
+      background-position: center;
+      padding: 150px 50px;
+      background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(https://source.unsplash.com/random);
+    }
+    .banner h1 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* Main Heading */
+    .main-heading {
+     color: var(--primary);
+     text-align: center;
+     font-size: 48px;
+     line-height: 1.2;
+   }
+
+   /* Paragraph */
+   .paragraph {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  /* Button */
+
+  .btn {
+    padding: 20px 60px;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    text-decoration: none;
+    color: var(--white);
+    transition: all .3s;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    background-color: var(--secondary-light);
+  }
+
+  /* Cards */
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-wrapper .column {
+    margin: 10px;
+  }
+
+  .card-wrapper .column:first-child {
+    margin-left: 0;
+  }
+
+  .card-wrapper .column:last-child {
+    margin-right: 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .center,
+  .btn-wrap {
+    margin: auto;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+  <nav>
+    <img src="{{{logo_url}}}" class="logo">
+  </nav>
+  <div class="main">
+    <div class="banner">
+      <div class="container">
+        <h1>Le Wagon brings creative people!</h1>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="main-heading">{{{main_heading}}}</h1>
+
+      <div class="col-6 center">
+        <p class="paragraph">bla bla bla</p>
+        <div class="btn-wrap">
+          <a href="#" class="btn">Book me!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="column">
+        <div class="card">
+          <img src="https://picsum.photos/400/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/500/400" />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="https://picsum.photos/300/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/500/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/400/400" />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="https://picsum.photos/500/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/400/400" />
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/400" />
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#" class="btn">Book me!</a>
+    </div>
+    <footer>
+      <p>Made with something, somewhere</p>
+    </footer>
+  </body>
+</html>
