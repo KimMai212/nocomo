@@ -60,17 +60,38 @@ minimal_design = Design.create!(
 # ---------------------------------------------------
 #  Create Color
 
-color_css = <<~CSS
-p {
-  color: black;
-}
-CSS
+Color.create!(
+  name: "Earth tones",
+  css: File.read("html/earth-tones-color.css")
+)
+
+Color.create!(
+  name: "Dark",
+  css: File.read("html/dark-color.css")
+)
+
+Color.create!(
+  name: "Rainbow",
+  css: File.read("html/rainbow-color.css")
+)
+
+Color.create!(
+  name: "Grey",
+  css: File.read("html/grey-color.css")
+)
+
+Color.create!(
+  name: "Awesome colours",
+  css: File.read("html/awesome-color.css")
+)
+
 puts "Assining a color to the project"
-color = Color.create!(
-  name: "dark_design",
-  css: color_css,
+bright_color = Color.create!(
+  name: "Bright",
+  css: File.read("html/bright-color.css")
   )
-project.color = color
+
+project.color = bright_color
 
 # ---------------------------------------------------
 #  Create Font
