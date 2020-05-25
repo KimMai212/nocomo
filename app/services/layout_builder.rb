@@ -13,6 +13,7 @@ class LayoutBuilder
         <meta charset="UTF-8">
         <title>Document</title>
         #{StyleBuilder.new(@project).build}
+        <script src="https://kit.fontawesome.com/a1a0676a70.js" crossorigin="anonymous"></script>
       </head>
       <body>
         #{html}
