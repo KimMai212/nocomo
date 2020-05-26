@@ -40,6 +40,7 @@ footer {
   background-position: center;
   height: 500px;
   display: flex;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);
 }
 
 .banner h1 {

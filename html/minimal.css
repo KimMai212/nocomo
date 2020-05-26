@@ -26,6 +26,11 @@ nav {
   align-items: center;
 }
 
+.text--center {
+  text-align: center;
+  margin: auto;
+}
+
 .logo {
   width: 40px;
 }
