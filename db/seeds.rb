@@ -67,7 +67,7 @@ Design.create!(
 
 puts "Creating dark design"
 Design.create!(
-  name: "Minimal",
+  name: "Dark",
   css: File.read("html/dark.css")
   )
 
@@ -116,7 +116,7 @@ Color.create!(
 puts "Creating bright colors"
 bright_color = Color.create!(
   name: "Bright",
-  css: File.read("html/bright-color.css")
+  css: File.read("html/colors/bright-color.css")
   )
 
 puts "Assigning bright colors to the project"
