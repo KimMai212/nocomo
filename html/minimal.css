@@ -2,7 +2,9 @@
   --primary: #000;
   --secondary: #666;
   --secondary-light: #aaa;
-  --white: #fff;
+  --grey: #666;
+  --grey-light: #F4F4F4;
+  --white: #fff;  
 }
 
 body {
@@ -44,15 +46,6 @@ h3.logo {
   padding: 0 50px;
 }
 
-footer {
-  width: 100%;
-  margin: 60px 0 0;
-  text-align: center;
-  color: var(--primary);
-  background-color: var(--white);
-  padding: 50px 0;
-}
-
 .row.flex {
   display: flex;
 }
@@ -85,10 +78,11 @@ footer {
 
 /* Main Heading */
 .main-heading {
- color: var(--primary);
- text-align: center;
- font-size: 48px;
- line-height: 1.2;
+  color: var(--primary);
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-top: 70px;
 }
 
 /* Paragraph */
@@ -196,4 +190,31 @@ footer {
 .card-long .card-product-infos {
   padding: 20px 64px 20px;
   vertical-align: baseline;
+}
+
+footer {
+  background: var(--grey-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: var(--grey);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: var(--grey);
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+footer .fa-heart {
+  color: var(--grey);
 }
