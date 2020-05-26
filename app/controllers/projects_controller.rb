@@ -34,15 +34,12 @@ class ProjectsController < ApplicationController
   end
 
   def save
-    raise
       if @project.save
         flash[:success] = "Layout is saved to your dashboard!"
         redirect_to dashboard_path
-        raise
       else
         flash[:alert] = "Something went wrong. Please try again!"
         redirect_to new_path(@project)
-        raise
       end
   end
 

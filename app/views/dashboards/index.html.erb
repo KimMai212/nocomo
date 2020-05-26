@@ -10,18 +10,25 @@
           <li class="nav-dash">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Saved Layouts</a>
           </li>
+          <li class="nav-dash">
+          <%= link_to "Create your new project!", generate_path, class: "nav-link active" %>
+          </li>
         </ul>
       </div>
       <hr>
-
-      <% if @project.nil? %>
-        <h1 > No saved projects </h1>
-        <% else %>
-          <div class="m-auto col iframe-container">
-            <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-          </div>
-        <% end %>
+      <% unless @projects.empty? %>
+          <div class="m-auto row iframe-container">
+          <% @projects.each do |p| %>
+            <div class="card col-xs-12 col-md-6 col-lg-4">
+              <iframe scrolling="no" class="card-iframe-thumbnail" 
+              src="<%= preview_path(p) %>" frameborder="0"></iframe>
+              </div>
+            <% end %>
+      <% else %>
+      <h1 > No saved projects </h1>
+      <% end %>
+    </div>
     </div>
   </div>
 </div>
-
+<%= link_to "< Back", generate_path %>
