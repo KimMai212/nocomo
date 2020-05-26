@@ -1,53 +1,49 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <div class="fixed">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5">
+      <div class="fixed col-md-4 col-lg-4 col-xl-3">
       <h2>Create your new project!</h2>
-      <form class="simple_form project-form" id="edit_project_<%= @project.id %>" novalidate="novalidate" enctype="multipart/form-data" action="/projects/<%= @project.id %>" accept-charset="UTF-8" method="post">
+      <form class="simple_form project-form col" id="edit_project_<%= @project.id %>" novalidate="novalidate" enctype="multipart/form-data" action="/projects/<%= @project.id %>" accept-charset="UTF-8" method="post">
         <input type="hidden" name="_method" value="patch">
-        <div class="form-group file optional project_logo">
+        <!-- <div class="form-group file optional project_logo">
           <label class="file optional" for="project_logo">Logo</label>
           <input class="form-control-file file optional" type="file" name="project[logo]" id="project_logo">
+        </div> -->
+        <br> </br>
+        <div class="form-group select optional project_layout_id">
+          <label class="select optional" for="project_layout_id"> <strong> Layout </strong></label>
+          <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
+          <% Layout.all.each do |l| %>
+              <label class="btn btn-outline-info m-2">
+                <input type="radio" id="<%= l.id %>" name="project[layout_id]" value="<%= l.id %>" /> <%= l.name %>
+              </label>
+            <% end %>
+         </div>
         </div>
         <div class="form-group select optional project_layout_id">
-          <label class="select optional" for="project_layout_id">Layout</label>
-          <select class="form-control is-valid select optional" name="project[layout_id]" id="project_layout_id">
-            <% unless @project.layout.nil? %>
-              <option value="<%= @project.layout.id %>"><%= @project.layout.name %></option>
-              <option value="0">------</option>
-            <% end %>
-            <%= Layout.all.each do |f| %>
-              <option value="<%= f.id %>"><%= f.name %></option>
-            <% end %>
-          </select>
-        </div>
-        <div class="form-group select optional project_design_id">
-          <label class="select optional" for="project_design_id">Design</label>
-          <select class="form-control is-valid select optional" name="project[design_id]" id="project_design_id">
-            <% unless @project.design.nil? %>
-              <option value="<%= @project.design.id %>"><%= @project.design.name %></option>
-              <option value="0">------</option>
-            <% end %>
-            <%= Design.all.each do |f| %>
-              <option value="<%= f.id %>"><%= f.name %></option>
-            <% end %>
-          </select>
-        </div>
-        <div class="form-group select optional project_color_id">
-          <label class="select optional" for="project_color_id">Color scheme</label>
-          <select class="form-control is-valid select optional" name="project[color_id]" id="project_color_id">
-            <% unless @project.color.nil? %>
-              <option value="<%= @project.color.id %>"><%= @project.color.name %></option>
-              <option value="0">------</option>
-            <% end %>
-            <%= Color.all.each do |f| %>
-              <option value="<%= f.id %>"><%= f.name %></option>
-            <% end %>
-          </select>
-        </div>
+        <label class="select optional" for="project_layout_id"> <strong> Design </strong> </label>
+        <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
+        <% Design.all.each do |d| %>
+            <label class="btn btn-outline-info m-2">
+              <input type="radio" id="<%= d.id %>" name="project[design]" value="<%= d.id %>" /> <%= d.name %>
+            </label>
+          <% end %>
+          </div>
+       </div>
+       <div class="form-group select optional project_layout_id">
+       <label class="select optional" for="project_layout_id"> <strong> Color scheme </strong> </label>
+       <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
+       <% Color.all.each do |c| %>
+           <label class="btn btn-outline-info m-2">
+             <input type="radio" id="<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
+           </label>
+         <% end %>
+      </div>
+      </div>
+     <br> </br>
         <div class="form-group select optional font_heading">
-          <label class="select optional" for="font_heading">Headline font</label>
-          <select class="form-control is-valid select optional" name="font[heading]" id="font_heading">
+          <label class="select optional" for="font_heading"> <strong> Headline font </strong>  </label>
+          <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[heading]" id="font_heading">
             <% unless @project.font.nil? %>
               <option value="<%= @project.font.heading %>"><%= @project.font.heading %></option>
               <option value="Lato">------</option>
@@ -56,10 +52,11 @@
               <option value="<%= f[0] %>"><%= f[0] %></option>
             <% end %>
           </select>
+          <br> </br>
         </div>
         <div class="form-group select optional font_paragraph form-group-valid">
-          <label class="select optional" for="font_paragraph">Paragraph font</label>
-          <select class="form-control is-valid select optional" name="font[paragraph]" id="font_paragraph">
+          <label class="select optional" for="font_paragraph"> <strong> Paragraph font </strong> </label>
+          <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[paragraph]" id="font_paragraph">
             <% unless @project.font.nil? %>
               <option value="<%= @project.font.paragraph %>"><%= @project.font.paragraph %></option>
               <option value="Lato">------</option>
@@ -73,7 +70,7 @@
       </form>
   </div>
     </div>
-    <div class="col-sm-12 col-md-8">
+    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
       <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
     </div>
   </div>
