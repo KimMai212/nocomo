@@ -9,7 +9,8 @@ class ProjectsController < ApplicationController
       @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: User.first.id, font_id: Font.first.id)
     end
     @fonts = FontList.list
-    #raise
+    # raise
+    logger.info "Processing the request..."
   end
 
   def update
@@ -26,7 +27,7 @@ class ProjectsController < ApplicationController
     @project.update(font_id: font.id)
 
     redirect_to generate_path(project_id: @project.id)
-    #raise
+    
   end
 
   def preview
@@ -38,7 +39,8 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:logo, :layout_id, :design_id, :font_id, :color_id, :placeholder_id)
+    # :logo, was in params, now is commented out beacause logo upload button is ugly
+    params.require(:project).permit(:layout_id, :design_id, :font_id, :color_id, :placeholder_id)
   end
   def font_params
     params.require(:font).permit(:heading, :paragraph)
