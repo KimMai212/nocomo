@@ -42,7 +42,7 @@ Layout.create!(
 
 puts "Creating blog layout"
 Layout.create!(
-  name: "Photography",
+  name: "Blog",
   html: File.read("html/blog-layout.html")
   )
 
@@ -67,7 +67,7 @@ Design.create!(
 
 puts "Creating dark design"
 Design.create!(
-  name: "Minimal",
+  name: "Dark",
   css: File.read("html/dark.css")
   )
 
