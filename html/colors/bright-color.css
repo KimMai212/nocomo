@@ -1,7 +1,13 @@
 :root {
-  --primary: #e6beae!important;
-  --secondary: #e7d8c9!important;
-  --secondary-light: #eee4e1!important;
-  --white: #ecf8f8!important;
-  --dark: #b2967d!important;
+      --primary: #d1f7ff!important;
+      --primary-light:#d6ffff!important;
+      --primary-dark:#d7fcf3!important;
+      --secondary: #f8f9fa!important;
+      --secondary-light: #f6fff8!important;
+      --button:#d7fcf3!important;
+      --grey:#adb5bd!important;
+      --grey-light:#dee2e6!important;
+      --grey-dark:#6c757d!important;
+      --white: #fff!important;
+      --dark: #131418!important;
 }
