@@ -6,10 +6,17 @@
       --primary: #25272B;
       --secondary: #1F2125;
       --secondary-light: #e5e5e5;
+      --button:#2f4550;
       --white: #fff;
       --dark: #131418;
 
     }
+var(--primary)
+var(--secondary)
+var(--secondary-light)
+var(--button)
+var(--white)
+var(--dark)
 
       /* Main styling */
       body {
@@ -24,7 +31,7 @@
         width: 100%;
         padding: 10px 0;
         text-align: center;
-        background-color:#25272B;
+        background-color: var(--primary);
         height: 40px;
         display: flex;
         justify-content: center;
@@ -41,7 +48,7 @@
         margin: 60px 0 0;
         text-align: center;
         color: #FFFFFF  ;
-        background-color: #25272B;
+        background-color: var(--primary);
         padding: 50px 0;
       }
 
@@ -145,7 +152,7 @@
       }
 
       .card:hover {
-        background: #25272B;
+        background: var(--primary);
 
       }
 
@@ -208,7 +215,7 @@
 
 
       .big-card:hover {
-        background: #25272B;
+        background: var(--primary);
       }
 
 
@@ -233,8 +240,9 @@
 
       }
 
-      .card-bottom:hover
-        background: #25272B;
+      .card-bottom:hover {
+        background: var(--primary);
+      }
       }
 
       .center {
@@ -253,7 +261,7 @@
       }
 */
       .card-bottom-product-infos:hover {
-        background: #25272B;
+        background: var(--primary);
       }
 
 
@@ -275,7 +283,7 @@
         }
 
         .content:hover {
-          background: #25272B;
+          background: var(--primary);
 
         }
 
