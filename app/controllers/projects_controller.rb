@@ -6,7 +6,11 @@ class ProjectsController < ApplicationController
     if params[:project_id].present?
       @project = Project.find(params[:project_id])
     else
-      @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: current_user.id, font_id: Font.first.id)
+      if current_user.nil?
+        @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: User.first.id, font_id: Font.first.id)
+      else
+        @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: current_user.id, font_id: Font.first.id)
+      end
     end
     @fonts = FontList.list
     # raise

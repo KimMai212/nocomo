@@ -16,7 +16,7 @@ project = Project.new
 # ---------------------------------------------------
 #  Create User
 puts "Assigning a user to the project"
-user = User.create(email: "peter@lustig.org", password: "123456")
+user = User.create(email: "guest@guests.org", password: "123456")
 project.user = user
 # ---------------------------------------------------
 #  Create Layout
