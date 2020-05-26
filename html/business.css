@@ -37,15 +37,6 @@ h3.logo {
   padding: 0 50px;
 }
 
-/*footer {
-  width: 100%;
-  margin: 60px 0 0;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--primary);
-  padding: 50px 0;
-}*/
-
 .row.flex {
   display: flex;
 }
