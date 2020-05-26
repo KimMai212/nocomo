@@ -1,5 +1,6 @@
 iframe {
   width: 100%;
+  height: -webkit-fill-available;
   background-color: #fff;
   border: 1px solid #ccc;
 }
@@ -7,5 +8,20 @@ iframe {
 .iframe-container{
   display: flex;
   width: auto;
-  height: 1900px;
+  .card {
+    height: 650px;
+    border: none;
+    .card-iframe-thumbnail {
+      width: 300%;
+      min-height: 1900px;
+      -ms-zoom: 0.33;
+      -moz-transform: scale(0.33);
+      -moz-transform-origin: 0 0;
+      -o-transform: scale(0.33);
+      -o-transform-origin: 0 0;
+      -webkit-transform: scale(0.33);
+      -webkit-transform-origin: 0 0;
+    }
+  }
+  
 }

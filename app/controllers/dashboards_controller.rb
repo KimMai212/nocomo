@@ -1,7 +1,8 @@
 class DashboardsController < ApplicationController
     skip_before_action :authenticate_user!
     def index
-        @project = Project.where(user_id: current_user.id).first
+        @projects = Project.where(user_id: current_user.id)
+        
     end
     def preview
       @preview = Project.find(@project.id)
