@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :projects, only: %i[create update]
   get "/generate", to: "projects#new"
   get "/generate/:project_id/preview", to: "projects#preview", as: "preview"
-
+  get "/dashboard", to: "dashboards#index"
 end

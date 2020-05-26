@@ -88,12 +88,12 @@
         </select>
       </div>
       <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary">
-      <input type="submit" name="commit" value="Save Project" data-disable-with="Save Project", class="btn btn-primary">
-    </form>
+      <%= link_to 'Save Project', dashboard_path, class: 'btn btn-primary' %>
+      </form>
   </div>
 </div>
-<div class="col-sm-12 col-md-8 col-lg-8">
-  <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
+<div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
+    <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
 </div>
 </div>
 </div>

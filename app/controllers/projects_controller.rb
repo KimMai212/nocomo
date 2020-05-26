@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
     if params[:project_id].present?
       @project = Project.find(params[:project_id])
     else
-      @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: User.first.id, font_id: Font.first.id)
+      @project = Project.create(layout_id: Layout.first.id, color_id: Color.first.id, design_id: Design.first.id, user_id: current_user.id, font_id: Font.first.id)
     end
     @fonts = FontList.list
     # raise
@@ -27,6 +27,19 @@ class ProjectsController < ApplicationController
     @project.update(font_id: font.id)
 
     redirect_to generate_path(project_id: @project.id)
+  end
+
+  def save
+    raise
+      if @project.save
+        flash[:success] = "Layout is saved to your dashboard!"
+        redirect_to dashboard_path
+        raise
+      else
+        flash[:alert] = "Something went wrong. Please try again!"
+        redirect_to new_path(@project)
+        raise
+      end
   end
 
   def preview
