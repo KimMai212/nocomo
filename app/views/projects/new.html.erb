@@ -8,8 +8,8 @@
         <!-- <div class="form-group file optional project_logo">
           <label class="file optional" for="project_logo">Logo</label>
           <input class="form-control-file file optional" type="file" name="project[logo]" id="project_logo">
-        </div> -->
-        <br> </br>
+        </div>
+        <br> </br> -->
         <div class="form-group select optional project_layout_id">
           <label class="select optional" for="project_layout_id"> <strong> Layout </strong></label>
           <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
@@ -38,17 +38,26 @@
             <% end %>
           </div>
         </div>
+
         <div class="form-group select optional project_color_id">
          <label class="select optional" for="project_color_id"><strong>Color scheme</strong></label>
          <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
            <% Color.all.each do |c| %>
-           <label class="btn btn-outline-info m-2" for="color-<%= c.id %>">
-            <% unless @project.color.id == c.id %>
-            <input type="radio" id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
-            <% else %>
-            <input type="radio" checked id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
-            <% end %>
-          </label>
+           <div class="label-wrap">
+             <label class="btn btn-outline-info color-label" for="color-<%= c.id %>">
+              <% cb = ColorBuilder.new(c) %>
+<div class="color-wrap">
+<%= cb.build.html_safe %>
+</div>
+              <% unless @project.color.id == c.id %>
+              <div>
+              <input type="radio" id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
+              <% else %>
+              <div>
+              <input type="radio" checked id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
+              <% end %>
+            </label>
+          </div>
           <% end %>
         </div>
       </div>
@@ -91,7 +100,7 @@
 
 <script>
   window.onload = () => {
-    const iframe = document.querySelector("iframe");
+    const iframe = document.querySelector("iframe#preview");
     const height = iframe.contentDocument.documentElement.clientHeight;
     iframe.style.height = height + 2 + "px";
   }
