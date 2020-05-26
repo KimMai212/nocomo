@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
     @project.update(layout_id: project_params[:layout_id])
     @project.update(design_id: project_params[:design_id])
     @project.update(color_id: project_params[:color_id])
-
+    #raise
     font = Font.find_by(heading: font_params[:heading], paragraph: font_params[:paragraph])
     if font.nil?
       font = Font.create(heading: font_params[:heading], paragraph: font_params[:paragraph])
@@ -27,7 +27,6 @@ class ProjectsController < ApplicationController
     @project.update(font_id: font.id)
 
     redirect_to generate_path(project_id: @project.id)
-    
   end
 
   def preview
