@@ -1,10 +1,16 @@
-:root {
-  --primary: #25272B;
-  --primary-light: #2f3239;
-  --secondary: #334751;
-  --white: #e5e5e5;
-  --dark: #131418;
-}
+ :root {
+      --primary: #25272B;
+      --primary-light:;
+      --primary-dark:;
+      --secondary-light: #e5e5e5;
+      --button:#2f4550;
+      --grey:;
+      --grey-light:;
+      --grey-dark:;
+      --white: #fff;
+      --dark: #131418;
+
+    }
 
 /* Main styling */
 body {
@@ -55,7 +61,7 @@ footer {
 .banner h1 {
   margin: 0;
   text-align: center;
-  color: var(--white);
+  color: var(--secondary-light);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -64,11 +70,13 @@ footer {
 .banner h2 {
   opacity: 80%;
   text-align: center;
+  color: var(--secondary-light);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 /* Main Heading */
 .main-heading {
+  color: var(--secondary-light);
   font-size: 48px;
   margin-top: 75px;
 }
@@ -76,6 +84,7 @@ footer {
 /* Paragraph */
 p,
 .btn {
+  color: var(--secondary-light);
   font-size: 18px;
   line-height: 1.2;
 }
@@ -86,10 +95,10 @@ p,
 /* Button */
 
 .btn {
-  color: var(--white);
+  color: var(--secondary-light);
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: var(--secondary);
+  background-color: var(--button);
   border-radius: 5px;
   text-decoration: none;
   transition: all .3s;
@@ -97,7 +106,7 @@ p,
 }
 
 .btn:hover {
-  background-color: var(--secondary);
+  background-color: var(--button);
   opacity: 50%;
 }
 
@@ -124,7 +133,8 @@ p,
   overflow: hidden;
   margin: 20px;
   border-radius: 5px;
-  background: var(--primary-light);
+  background: var(--secondary);
+  color: var(--secondary-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,6 +151,7 @@ p,
 }
 
 .card h2 {
+  color: var(--secondary-light);
   font-size: 24px;
   font-weight: bold;
   margin: 0;
@@ -152,6 +163,7 @@ p,
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: var(--secondary-light);
 }
 
 .card .card-product-infos {
@@ -167,8 +179,8 @@ p,
   margin: 20px;
   width: auto;
   overflow: hidden;
-  background: var(--primary-light);
-  color: var(--white);
+  background: var(--secondary);
+  color: var(--secondary-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,10 +201,10 @@ p,
 }
 
 .card-bottom {
-  color: var(--white);
+  color: var(--secondary-light);
   border-radius: 5px;
   overflow: hidden;
-  background: var(--primary-light);
+  background: var(--secondary);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -203,7 +215,7 @@ p,
 
 .card-bottom-product-infos {
   padding: 20px;
-  color: var(--white);
+  color: var(--secondary-light);
 }
 
 .card-bottom-product-infos p {
@@ -225,13 +237,13 @@ p,
 }
 
 .card-bottom-product-infos:hover {
-  background: var(--primary);
+  background: var(--secondary);
 }
 
 .content {
   margin: 20px;
   padding: 30px;
-  background-color: var(--primary-light);
+  background-color: var(--secondary-light);
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -240,7 +252,7 @@ p,
   text-align: center;
   line-height: 1.5;
   font-size: 25px;
-}      
+}
 
 .content:hover {
   background: var(--primary);
