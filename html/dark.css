@@ -1,17 +1,16 @@
  :root {
-      --primary: #25272B;
+      --primary: #25272B!important;
       --primary-light:;
       --primary-dark:;
-      --secondary-light: #e5e5e5;
-      --button:#2f4550;
+      --secondary: #1F2125!important;
+      --secondary-light: #e5e5e5!important;
+      --button:#2f4550!important;
       --grey:;
       --grey-light:;
       --grey-dark:;
-      --white: #fff;
-      --dark: #131418;
-
+      --white: #fff!important;
+      --dark: #131418!important;
     }
-
 /* Main styling */
 body {
   width: auto;
@@ -37,14 +36,34 @@ nav {
   margin: auto;
 }
 
-footer {
-  width: 100%;
-  margin: 60px 0 0;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--primary);
-  padding: 50px 0;
+      .footer {
+        margin-top: 100px;
+        background-color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 0px 50px;
+        color: var(--white);
+        }
+      .footer-links {
+        display: flex;
+        align-items: center;
+      }
+      .footer-links a {
+          color: var(--white);
+        opacity: 0.6;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 0px 10px;
+      }
+      .footer-links a:hover {
+        opacity: 1;
+      }
+      .footer .fa-heart {
+        color: #D23333;
 }
+
 
 .col-6 {
   width: 50%;
@@ -226,6 +245,10 @@ p,
   background: var(--primary);
 }
 
+.card-bottom-product-infos:hover {
+  background: var(--primary);
+}
+
 .center {
   display: flex;
   flex-direction: row;
@@ -241,9 +264,10 @@ p,
 }
 
 .content {
+  color: var(--secondary-light);
   margin: 20px;
   padding: 30px;
-  background-color: var(--secondary-light);
+  background: var(--secondary);
   border-radius: 5px;
   display: flex;
   flex-direction: row;

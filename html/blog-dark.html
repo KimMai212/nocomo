@@ -42,14 +42,43 @@
         margin: auto;
       }
 
-      footer {
-        width: 100%;
-        margin: 60px 0 0;
-        text-align: center;
-        color: var(--white) ;
+
+      .footer {
+        margin-top: 100px;
         background-color: var(--primary);
-        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 0px 50px;
+        color: var(--white);
+        }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
       }
+
+      .footer-links a {
+          color: var(--white);
+        opacity: 0.6;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 0px 10px;
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+      }
+
+      .footer .fa-heart {
+        color: #D23333;
+}
+
+      .footer .fa-heart:hover {
+        color: #D23333;
+        transform: scale(1.5);
+}
 
       .col-6 {
         width: 50%;
@@ -242,7 +271,7 @@
       .card-bottom:hover {
         background: var(--primary);
       }
-      }
+
 
       .center {
 
@@ -266,9 +295,9 @@
 
       .content {
         color: var(--secondary-light);
-       margin: 20px;
+        margin: 20px;
         padding: 30px;
-        background-color: var(--secondary);
+        background: var(--secondary);
         border-radius: 5px;
         display: flex;
         flex-direction: row;
@@ -292,6 +321,7 @@
 
       }
      </style>
+     <script src="https://kit.fontawesome.com/a1a0676a70.js" crossorigin="anonymous"></script>
  </head>
 
   <body>
@@ -417,8 +447,16 @@
       </div>
 </div>
 
-    <footer>
-      <p>Made with something, somewhere</p>
-    </footer>
-  </body>
-</html>
+ <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    <div class="footer-copyright">
+      <ol>
+      This footer is made with <i class="fas fa-heart"></i>
+      </ol>
+    </div>
