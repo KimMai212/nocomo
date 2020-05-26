@@ -15,7 +15,11 @@
           <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
           <% Layout.all.each do |l| %>
               <label class="btn btn-outline-info m-2">
-                <input type="radio" id="<%= l.id %>" name="project[layout_id]" value="<%= l.id %>" /> <%= l.name %>
+              <% unless @project.layout_id == l.id %>
+              <input type="radio"  id="<%= l.id %>" name="project[layout_id]" value="<%= l.id %>" /> <%= l.name %>
+              <% else %>
+              <input type="radio" checked id="<%= l.id %>" name="project[layout]" value="<%= l.id %>" /> <%= l.name %>
+            <% end %>           
               </label>
             <% end %>
          </div>
@@ -24,20 +28,28 @@
         <label class="select optional" for="project_layout_id"> <strong> Design </strong> </label>
         <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
         <% Design.all.each do |d| %>
-            <label class="btn btn-outline-info m-2">
-              <input type="radio" id="<%= d.id %>" name="project[design]" value="<%= d.id %>" /> <%= d.name %>
-            </label>
+            <label class="btn btn-outline-info m-2">           
+              <% unless @project.design_id == d.id %>
+                <input type="radio" checked id="<%= d.id %>" name="project[design]" value="<%= d.id %>" /> <%= d.name %>
+              <% else %>
+                <input type="radio" id="<%= d.id %>" name="project[design]" value="<%= d.id %>" /> <%= d.name %>
+              <% end %>           
+              </label>
           <% end %>
           </div>
        </div>
        <div class="form-group select optional project_layout_id">
        <label class="select optional" for="project_layout_id"> <strong> Color scheme </strong> </label>
        <div class="btn-group btn-group-toggle button-group-green" data-toggle="buttons">
-       <% Color.all.each do |c| %>
+       <% Color.all.each do |c| %>       
            <label class="btn btn-outline-info m-2">
-             <input type="radio" id="<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
+              <% if !@project.color.nil? %>
+                <input type="radio" checked id="<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
+              <% else %>
+                <input type="radio" id="<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /> <%= c.name %>
+              <% end %>
            </label>
-         <% end %>
+      <% end %>
       </div>
       </div>
      <br> </br>
@@ -67,7 +79,8 @@
           </select>
         </div>
         <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary">
-      </form>
+              <input type="submit" name="commit" value="Save Project" data-disable-with="Save Project", class="btn btn-primary">
+        </form>
   </div>
     </div>
     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
