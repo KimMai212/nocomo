@@ -1,6 +1,8 @@
 .fixed {
-  position: fixed;
-} 
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 80px;
+}
 #form-control is-valid select optional {
   background: transparent;
   border: none !important;
@@ -18,11 +20,11 @@ input:focus ~ .select optional {
   border-bottom: 2px #489ca9 solid;
 }
 
-.button-group-green{
+.button-group-green {
   flex-wrap: wrap;
   display: flex;
 }
-h2{
+h2 {
   text-align: center;
   font-family: Roboto;
 }

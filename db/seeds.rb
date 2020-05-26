@@ -42,7 +42,7 @@ Layout.create!(
 
 puts "Creating blog layout"
 Layout.create!(
-  name: "Photography",
+  name: "Blog",
   html: File.read("html/blog-layout.html")
   )
 
