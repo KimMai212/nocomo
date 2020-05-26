@@ -7,18 +7,17 @@
     margin-top:50px;
     margin-bottom: 0;
     height: 100px;
+    padding: 10px;
     p, ul{
       margin: 0;
     }
-  
     li {
       display: inline;
       margin: auto;
       text-align: center;
       font-size: 30px;
-
     }
-  
+
     .fa {
       padding: 18px;
       font-size: 34px;
@@ -29,14 +28,13 @@
       color: $light-gray;
       text-shadow:2px 3px rgba(255,165,0,.75)
     }
-  
+
     .fa:hover {
       color: #f6ca4f;
       transition: 1s;
     }
   }
-  
+
   .content {
     min-height: calc(100vh - 190px);
   }
-  
