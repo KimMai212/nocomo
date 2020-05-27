@@ -13,6 +13,7 @@
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 nav {
   width: 100%;
@@ -84,6 +85,9 @@ h3.logo {
 }
 
 /* Paragraph */
+h1 {
+  color: var(--primary);
+}
 .paragraph {
   text-align: left;
   font-size: 18px;
@@ -110,9 +114,8 @@ h3.logo {
   margin: 20px auto;
 }
 
-
 .btn:hover {
-  background-color: var(--secondary);
+  background-color: var(--primary-light);
 }
 
 /* Cards */
@@ -196,9 +199,9 @@ h3.logo {
 
 /* New Shop */
 
-.footer {
+footer {
   margin-top: 100px;
-  background: #D27675;
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,7 +224,7 @@ h3.logo {
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
+  color: var(--grey-light);
 }
 
 .banner h2 {
@@ -239,7 +242,7 @@ h3.logo {
   flex-direction: column;
   align-items: center;
   width: 60%;
-  background-color: #F4EEE3;
+  background-color: var(--grey-light);
   color: white;
   margin-top: 24px;
 }
@@ -254,7 +257,7 @@ h3.logo {
   font-size: 24px;
   font-weight: bold;
   margin: 4px;
-  color: #382423;
+  color: var(--primary);
 }
 
 .card p {
@@ -263,7 +266,7 @@ h3.logo {
   opacity: .7;
   margin-bottom: 4px;
   margin-top: 4px;
-  color: #382423;
+  color: var(--dark);
 }
 
 .banner-title {
@@ -305,12 +308,13 @@ h3.logo {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 20px;
   padding: 30px;
-  background-color: #F4EEE3;
+  background-color: var(--primary);
   border-radius: 2px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 30%;
+  color: var(--white);
 }
 
 hr {
@@ -326,13 +330,12 @@ hr {
 
 .card-photo {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F4EEE3;
-  color: white;
+  background-color: var(--primary);
+  color: var(--dark);
   margin-top: 24px;
 }
 
@@ -371,70 +374,70 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F4EEE3;
+  background: var(--primary);
 
-  }
+}
 
-  .text--center {
-    text-align: center;
-    margin: auto;
-  }
+.text--center {
+  text-align: center;
+  margin: auto;
+}
 
-  .card p {
-    font-size: 16px;
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-    margin-top: 8px;
-  }
+.card p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
 
-  .big-card .card-product-infos {
-        padding: 20px 40px 0;
-      }
+.big-card .card-product-infos {
+  padding: 20px 40px 0;
+}
 
-  .big-card img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-
-        .card-bottom {
-          /*color: var(--white);*/
-          border-radius: 5px;
-          overflow: hidden;
-          background: #F4EEE3;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          max-width: 100%;
-          max-height: 250px;
-          margin: 20px;
-        }
-
-        .card-bottom-product-infos {
-          padding: 20px;
-          background: #F4EEE3;
-          color: #382423;
-
-        }
-
-        .card-bottom-product-infos p {
-          margin: 0;
-        }
+.big-card img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
 
 
+.card-bottom {
+  /*color: var(--white);*/
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  max-height: 250px;
+  margin: 20px;
+}
 
-        .center {
-          display: flex;
-          flex-direction: row;
-        }
+.card-bottom-product-infos {
+  padding: 20px;
+  background: var(--grey-light);
+  color: var(--dark);
 
-        .content:hover {
-          background: var(--primary);
-        }
-        .content p {
-          font-size: 25px;
-        }
+}
+
+.card-bottom-product-infos p {
+  margin: 0;
+}
+
+
+
+.center {
+  display: flex;
+  flex-direction: row;
+}
+
+.content:hover {
+  background: var(--primary);
+}
+.content p {
+  font-size: 25px;
+}
 
 

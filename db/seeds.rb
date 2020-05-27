@@ -121,7 +121,7 @@ Color.create!(
 
 puts "Creating neon colors"
 Color.create!(
-  name: "Patry Patrick",
+  name: "Party Patrick",
   css: File.read("html/colors/neon-colors.css")
 )
 
