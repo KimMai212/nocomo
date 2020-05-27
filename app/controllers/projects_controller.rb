@@ -34,13 +34,13 @@ class ProjectsController < ApplicationController
   end
 
   def save
-      if @project.save
-        flash[:success] = "Layout is saved to your dashboard!"
-        redirect_to dashboard_path
-      else
-        flash[:alert] = "Something went wrong. Please try again!"
-        redirect_to new_path(@project)
-      end
+    if @project.save
+      flash[:success] = "Layout is saved to your dashboard!"
+      redirect_to dashboard_path
+    else
+      flash[:alert] = "Something went wrong. Please try again!"
+      redirect_to new_path(@project)
+    end
   end
 
   def preview
@@ -49,15 +49,15 @@ class ProjectsController < ApplicationController
     @html = builder.build
     render :layout => false
   end
-  def generate 
-    @preview = Project.find(params[:projectid])
-    builder = LayoutBuilder.new(@preview)
-    @html = builder.build
 
-    pdf = WickedPdf.new.pdf_from_string(@html)
-    send_data pdf, :disposition => 'attachment', :filename=>"layout.pdf"
+  # def generate
+  #   @preview = Project.find(params[:project_id])
+  #   builder = LayoutBuilder.new(@preview)
+  #   @html = builder.build
 
-  end
+  #   pdf = WickedPdf.new.pdf_from_string(@html)
+  #   send_data pdf, :disposition => 'attachment', :filename=>"layout.pdf"
+  # end
 
   private
   def project_params
@@ -65,6 +65,6 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:layout_id, :design_id, :font_id, :color_id, :placeholder_id)
   end
   def font_params
-    params.require(:font).permit(:heading, :paragraph, :iframe)
+    params.require(:font).permit(:heading, :paragraph)
   end
 end
