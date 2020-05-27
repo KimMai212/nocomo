@@ -1,9 +1,10 @@
+<% content_for :meta_title, "Generate your mockup" %>
 <div class="container mt-5">
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-sm-12 col-md-4 col-lg-4">
-      <div class="fixed">
+      <div>
         <h2>Create your new project!</h2>
-        <form class="simple_form project-form col" id="edit_project_<%= @project.id %>" novalidate="novalidate" enctype="multipart/form-data" action="/projects/<%= @project.id %>" accept-charset="UTF-8" method="post">
+        <form class="simple_form project-form col pl-0" id="edit_project_<%= @project.id %>" novalidate="novalidate" enctype="multipart/form-data" action="/projects/<%= @project.id %>" accept-charset="UTF-8" method="post">
           <input type="hidden" name="_method" value="patch">
         <!-- <div class="form-group file optional project_logo">
           <label class="file optional" for="project_logo">Logo</label>
@@ -46,63 +47,62 @@
            <div class="label-wrap">
              <label class="btn btn-outline-info color-label" for="color-<%= c.id %>">
               <% cb = ColorBuilder.new(c) %>
-<div class="color-wrap">
-<%= cb.build.html_safe %>
-</div>
+              <div class="color-wrap">
+                <%= cb.build.html_safe %>
+              </div>
               <% unless @project.color.id == c.id %>
               <div>
-              <input type="radio" id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
-              <% else %>
-              <div>
-              <input type="radio" checked id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
+                <input type="radio" id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
+                <% else %>
+                <div>
+                  <input type="radio" checked id="color-<%= c.id %>" name="project[color_id]" value="<%= c.id %>" /><%= c.name %></div>
+                  <% end %>
+                </label>
+              </div>
               <% end %>
-            </label>
+            </div>
           </div>
-          <% end %>
-        </div>
+          <br> </br>
+          <div class="form-group select optional font_heading">
+            <label class="select optional" for="font_heading"><strong>Headline font</strong></label>
+            <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[heading]" id="font_heading">
+              <% unless @project.font.nil? %>
+              <option value="<%= @project.font.heading %>"><%= @project.font.heading %></option>
+              <option value="Lato">------</option>
+              <% end %>
+              <%= @fonts.each do |f| %>
+              <option value="<%= f[0] %>"><%= f[0] %></option>
+              <% end %>
+            </select>
+            <br> </br>
+          </div>
+          <div class="form-group select optional font_paragraph form-group-valid">
+            <label class="select optional" for="font_paragraph"><strong>Paragraph font</strong></label>
+            <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[paragraph]" id="font_paragraph">
+              <% unless @project.font.nil? %>
+              <option value="<%= @project.font.paragraph %>"><%= @project.font.paragraph %></option>
+              <option value="Lato">------</option>
+              <% end %>
+              <%= @fonts.each do |f| %>
+              <option value="<%= f[0] %>"><%= f[0] %></option>
+              <% end %>
+            </select>
+          </div>
+          <div class="form-footer">
+            <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary mr-1">
+            <%= link_to 'Save Project', dashboard_path, class: 'btn btn-secondary ml-1' %>
+          </div>
+        </form>
       </div>
-      <br> </br>
-      <div class="form-group select optional font_heading">
-        <label class="select optional" for="font_heading"><strong>Headline font</strong></label>
-        <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[heading]" id="font_heading">
-          <% unless @project.font.nil? %>
-          <option value="<%= @project.font.heading %>"><%= @project.font.heading %></option>
-          <option value="Lato">------</option>
-          <% end %>
-          <%= @fonts.each do |f| %>
-          <option value="<%= f[0] %>"><%= f[0] %></option>
-          <% end %>
-        </select>
-        <br> </br>
-      </div>
-      <div class="form-group select optional font_paragraph form-group-valid">
-        <label class="select optional" for="font_paragraph"><strong>Paragraph font</strong></label>
-        <select class="btn dropdown-toggle w-100 dropdown-borderless" name="font[paragraph]" id="font_paragraph">
-          <% unless @project.font.nil? %>
-          <option value="<%= @project.font.paragraph %>"><%= @project.font.paragraph %></option>
-          <option value="Lato">------</option>
-          <% end %>
-          <%= @fonts.each do |f| %>
-          <option value="<%= f[0] %>"><%= f[0] %></option>
-          <% end %>
-        </select>
-      </div>
-      <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary">
-      <%= link_to 'Save Project', dashboard_path, class: 'btn btn-primary' %>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
+      <form action="/generatepdf" method="post" remote="true">
+        <input id="generatepdf" type="submit" name="commit" value="Save as PDF" class="btn btn-outline-info " >
+        <input hidden name="projectid" value="<%= @project.id  %>" class="btn btn-primary">
+        <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
       </form>
-          
+    </div>
   </div>
-</div>
-<div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
-    <form action="/generatepdf" method="post" remote="true">
-      <input id="generatepdf" type="submit" name="commit" value="Save as PDF" class="btn btn-outline-info " >
-      
-      <input hidden name="projectid" value="<%= @project.id  %>" class="btn btn-primary">
-
-      <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-    </form>
-</div>
-</div>
 </div>
 
 <script>

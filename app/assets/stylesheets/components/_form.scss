@@ -58,7 +58,14 @@ input:focus ~ .select optional {
   display: flex;
 }
 
-h2 {
+.form-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 20px;
   text-align: center;
-  font-family: Roboto;
+  box-shadow: 0 -1px 10px 0px rgba(0, 0, 0, 0.1);
 }

@@ -1,10 +1,12 @@
+<% content_for :meta_title, "Your 3-minute mockup builder" %>
+<% content_for :meta_description, "Build your website mockup in less than 5 minutes!" %>
+<% content_for :meta_image, "banner.svg" %>
 <div class="home-banner">
   <div class="home-banner-content-wrapper">
     <div class="left">
-      <h2>A beautiful landing page mockup in less than 15 minutes.</h2>
-     <h4>No need for code or design.</h4>
-      <input type="submit" name="commit" value="How does it work?" class="btn btn-primary mt-3"
-      data-disable-with="How does it work?">
+      <h2 class="mb-3 h1">A beautiful landing page mockup in less than 5 minutes.</h2>
+      <p class="big">No need for code or design.</p>
+      <%= link_to "How does it work?", "#how-to", class: "btn btn-primary mt-3", id: "scroll-down" %>
     </div>
     <div class="right">
       <%= image_tag "banner.svg", alt: "Banner photo" %>
@@ -16,24 +18,24 @@
     <h1 class="main-heading">Why use NoCoMo?</h1>
     <div class="home-card-wrapper">
       <div class="home-card">
-        <%= image_tag "1.svg", alt: "Photo build on it", width: 100 %>
+        <%= image_tag "why-clean.svg", alt: "Quick but clean" %>
         <div class="home-card-product-infos">
           <h3>Quick but clean</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+          <p>Build a beautiful mockup without any experience!</p>
         </div>
       </div>
       <div class="home-card">
-        <%= image_tag "3.svg", alt: "Photo build on it", width: 100 %>
+        <%= image_tag "why-time.svg", alt: "Don’t waste time"%>
         <div class="home-card-product-infos">
-          <h3>Don't waste time</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+          <h3>Don’t waste time</h3>
+          <p>Only a few clicks. Your mockup is done in no time!</p>
         </div>
       </div>
       <div class="home-card">
-        <%= image_tag "2.svg", alt: "Photo build on it", width: 100 %>
+        <%= image_tag "why-build.svg", alt: "Build on it" %>
         <div class="home-card-product-infos">
           <h3>Build on it</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+          <p>Export it as code. Reuse it for the real website!</p>
         </div>
       </div>
     </div>
@@ -43,51 +45,53 @@
   </div>
 </div>
 
-<div class="work-section">
+<div id="how-to" class="work-section">
   <h1>How does it work? </h1>
   <div class="work-content">
-    <div class="work-card">
-      <%= image_tag "4.svg", alt: "Photo build on it" %>
+    <div class="row mb-5 mx-auto">
+      <div class="work-card col-xs-12 col-md-8">
+        <%= image_tag "4.svg", alt: "Choose design" %>
+      </div>
+      <div class="work-card col-xs-12 col-md-4">
+        <h2>1. Choose your template</h2>
+        <p>Do you want to show a shop, a business website or a blog? These kinds of websites are structured differently. Choose a template fitting your needs!</p>
+      </div>
     </div>
-    <div class="work-card">
-      <h2>1. Choose your design</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et
-      dolore magna aliquyam erat, sed diam voluptua.</p>
+    <div class="row my-5 mx-auto">
+      <div class="work-card col-xs-12 col-md-4">
+        <h2>2. Individualise your page</h2>
+        <p>You want a rather minimalistic website with natural colours? No worries, we got you ;)</p>
+      </div>
+      <div class="work-card col-xs-12 col-md-8">
+        <%= image_tag "5.svg", alt: "Individualise" %>
+      </div>
     </div>
-    <div class="work-card">
-      <h2>2. Individualise your page</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et dolore magna aliquyam erat, sed diam voluptua.</p>
-    </div>
-    <div class="work-card">
-      <%= image_tag "5.svg", alt: "Photo build on it" %>
-    </div>
-    <div class="work-card">
-      <%= image_tag "6.svg", alt: "Photo build on it"%>
-    </div>
-    <div class="work-card">
-      <h2>3. Download it!</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et dolore magna aliquyam erat, sed diam voluptua.</p>
+    <div class="row mt-5 mx-auto">
+      <div class="work-card col-xs-12 col-md-8">
+        <%= image_tag "6.svg", alt: "Export"%>
+      </div>
+      <div class="work-card col-xs-12 col-md-4">
+        <h2>3. Download it!</h2>
+        <p>Export the mockup as HTML or JPG and just insert it into your presentation. Voilà!</p>
+      </div>
     </div>
   </div>
   <div class="button-wrapper">
     <%= link_to "Start now!", generate_path, class: "btn btn-primary" %>
   </div>
 </div>
-
+<hr>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-<h1>What could it look like? </h1>
+  <h1>What could it look like?</h1>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag "1.svg", alt: "Photo build on it", class: "d-block w-100 h-100"%>
+      <%= image_tag "preview-1.jpg", alt: "Photography layout, Minimal design", class: "d-block"%>
     </div>
     <div class="carousel-item">
-      <%= image_tag "2.svg", alt: "Photo build on it", class: "d-block w-100 h-100"%>
+      <%= image_tag "preview-2.jpg", alt: "Business layout, Corporate design", class: "d-block"%>
     </div>
     <div class="carousel-item">
-      <%= image_tag "3.svg", alt: "Photo build on it", class: "d-block w-100 h-100"%>
+      <%= image_tag "preview-3.jpg", alt: "Blog layout, Dark design", class: "d-block"%>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -115,27 +119,27 @@
       <%= image_tag "2.svg", alt: "Photo build on it", width: 100 %>
       <div class="testimonial-card-product-infos">
         <h3>Great tool</h3>
-        <p>NoCoMo gives you a lot of freedom in the design process.</p>
+        <p>NoCoMo; gives you a lot of freedom in the design process.</p>
       </div>
     </div>
     <div class="testimonial-card">
       <%= image_tag "5.svg", alt: "Photo build on it", width: 100 %>
       <div class="testimonial-card-product-infos">
         <h3>Fun factor</h3>
-        <p>Starting up is very playful and, initially, impressive results are achieved quickly.</p>
+        <p>You can start playfully yet achieve impressive results quickly.</p>
       </div>
     </div>
     <div class="testimonial-card">
       <%= image_tag "3.svg", alt: "Photo build on it", width: 100 %>
       <div class="testimonial-card-product-infos">
         <h3>Flexibility of design</h3>
-        <p>The designs look professional and allow for pixel-perfect customizations .</p>
+        <p>The designs looks professional and allow for pixel-perfect customizations.</p>
       </div>
     </div>
     <div class="testimonial-card">
       <%= image_tag "4.svg", alt: "Photo build on it", width: 100 %>
       <div class="testimonial-card-product-infos">
-        <h3>Easy of use</h3>
+        <h3>Easy to use</h3>
         <p>The editor is very easy to understand.</p>
       </div>
     </div>
@@ -143,13 +147,13 @@
 </div>
 </div>
 <div class="work-section">
-  <div class="work-content">
-    <div class="work-card">
+  <div class="work-content mb-5">
+    <div class="work-card col-xs-12 col-md-8">
       <%= image_tag "7.svg", alt: "Photo build on it" %>
     </div>
-    <div class="work-card">
+    <div class="work-card col-xs-12 col-md-4">
       <h1>Start building your website now!</h1>
-      <p>Now everyone can become designers if they are passionate about their project. No matter what you are up to - a website, an online shop, a landing page or a blog - with NoCoMo you can create your landing page quickly and easily.</p>
+      <p>Without any prior knowledge you can create a perfect mockup. No matter what you are up to - a website, an online shop, a landing page or a blog - with NoCoMo; you can create it in no time!</p>
     </div>
   </div>
   <div class="button-wrapper">

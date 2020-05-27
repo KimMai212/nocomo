@@ -1,9 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Cardo:wght@700|Montaga&family');
+@import url('https://fonts.googleapis.com/css?family=Cardo:wght@700|Source+Code+Pro:wght@700&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Lato";
-$headers-font: "Montaga-serif";
+$headers-font: "Source Code Pro", monospace;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

@@ -5,12 +5,38 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  background-color: #fff;
+  padding: 20px;
+  padding-right: 0;
+  text-align: right;
+}
+
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-collapse {
+    position: absolute;
+    right: 20px;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+  }
 }
 .navbar {
   background: white;
   height: 60px;
 }
 
-.navbar-brand * {
-  margin-bottom: 0;
+.navbar-brand {
+  margin: auto;
+  * {
+    margin-bottom: 0;
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+  position: absolute;
+  right: 0;
+}
+.logo {
+  height: 40px;
 }
