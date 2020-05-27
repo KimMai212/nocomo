@@ -101,11 +101,12 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
-      <form action="/generatepdf" method="post" remote="true">
+      <!-- <form action="/generatepdf" method="post" remote="true">
         <input id="generatepdf" type="submit" name="commit" value="Save as PDF" class="btn btn-outline-info " >
         <input hidden name="projectid" value="<%= @project.id  %>" class="btn btn-primary">
         <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-      </form>
+      </form> -->
+      <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
     </div>
   </div>
 </div>
