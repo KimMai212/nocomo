@@ -2,6 +2,21 @@
   &.btn-primary {
     border-color: $yellow;
     background-color: $yellow;
+    &:hover {
+      background-color: lighten($yellow, 20%);
+      border-color: lighten($yellow, 20%);
+    }
+  }
+  &.btn-big {
+    border-color: $orange;
+    background-color: $orange;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 24px;
+    &:hover {
+      background-color: darken($orange, 20%);
+      border-color: darken($orange, 20%);
+    }
   }
   &.btn-secondary {
     background-color: transparent;

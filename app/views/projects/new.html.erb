@@ -89,26 +89,41 @@
             </select>
           </div>
           <div class="form-footer">
-            <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary mr-1">
-            <%= link_to 'Save Project', dashboard_path, class: 'btn btn-secondary ml-1' %>
+            <div>
+            <input type="submit" name="commit" value="Update preview" data-disable-with="Update Project", class="btn btn-primary mr-1">
+            <%= link_to 'Add to account', dashboard_path, class: 'btn btn-secondary ml-1' %>
+            </div>
+            <div>
+              <%= link_to 'Export as Code', preview_path(@project), download: "project.html", class: "btn btn-secondary" %>
+            </div>
           </div>
         </form>
       </div>
     </div>
     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
-      <form action="/generatepdf" method="post" remote="true">
+      <!-- <form action="/generatepdf" method="post" remote="true">
         <input id="generatepdf" type="submit" name="commit" value="Save as PDF" class="btn btn-outline-info " >
         <input hidden name="projectid" value="<%= @project.id  %>" class="btn btn-primary">
         <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
-      </form>
+      </form> -->
+      <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
     </div>
   </div>
 </div>
 
 <script>
   window.onload = () => {
+    //iframe height
     const iframe = document.querySelector("iframe#preview");
     const height = iframe.contentDocument.documentElement.clientHeight;
     iframe.style.height = height + 2 + "px";
+
+    //form footer
+    // const formFooter = document.querySelector(".form-footer");
+    // const footer = document.querySelector("footer");
+    // const footerPos = footer.offsetTop;
+    // document.addEventListener("scroll", (event) => {
+    //   console.log(window.scrollY);
+    // });
   }
 </script>
