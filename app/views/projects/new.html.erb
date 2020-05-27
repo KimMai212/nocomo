@@ -89,8 +89,13 @@
             </select>
           </div>
           <div class="form-footer">
+            <div>
             <input type="submit" name="commit" value="Update Project" data-disable-with="Update Project", class="btn btn-primary mr-1">
             <%= link_to 'Save Project', dashboard_path, class: 'btn btn-secondary ml-1' %>
+            </div>
+            <div>
+              <%= link_to 'Download as Code', preview_path(@project), download: "project.html", class: "btn btn-secondary" %>
+            </div>
           </div>
         </form>
       </div>
@@ -107,8 +112,17 @@
 
 <script>
   window.onload = () => {
+    //iframe height
     const iframe = document.querySelector("iframe#preview");
     const height = iframe.contentDocument.documentElement.clientHeight;
     iframe.style.height = height + 2 + "px";
+
+    //form footer
+    // const formFooter = document.querySelector(".form-footer");
+    // const footer = document.querySelector("footer");
+    // const footerPos = footer.offsetTop;
+    // document.addEventListener("scroll", (event) => {
+    //   console.log(window.scrollY);
+    // });
   }
 </script>
