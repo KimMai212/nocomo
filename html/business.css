@@ -1,9 +1,12 @@
 :root {
-  --primary: #046865;
-  --secondary: #A13D63;
-  --secondary-light: #F7A278;
-  --white: #ffbe0b;
-  --dark: #333;
+  --primary: #028090!important;
+  --primary-light: #CAFFBF!important;
+  --secondary: #00A896!important;
+  --grey: #ADB5BD!important;
+  --grey-light: #DEE2E6!important;
+  --grey-dark: #6C757D!important;
+  --dark: #131418!important;
+  --white: #fff!important;
 }
 
 /* Main styling */
@@ -365,42 +368,36 @@ hr {
   margin: 20px;
   width: auto;
   overflow: hidden;
-        /*background: var(--primary-light);
-        color: var(--white);*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /*color: var(--white);*/
-        background: #F4EEE3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F4EEE3;
 
-      }
+  }
 
-      .text--center {
-        text-align: center;
-        margin: auto;
-      }
+  .text--center {
+    text-align: center;
+    margin: auto;
+  }
 
-      .card p {
-        font-size: 16px;
-        line-height: 1.4;
-        opacity: .7;
-        margin-bottom: 0;
-        margin-top: 8px;
-      }
+  .card p {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
 
-      .big-card .card-product-infos {
+  .big-card .card-product-infos {
         padding: 20px 40px 0;
       }
 
-      .big-card img {
+  .big-card img {
         height: 300px;
         width: 100%;
         object-fit: cover;
       }
 
-      /*.big-card:hover {
-        background: var(--primary);
-        }*/
 
         .card-bottom {
           /*color: var(--white);*/
@@ -417,19 +414,16 @@ hr {
 
         .card-bottom-product-infos {
           padding: 20px;
-          /*color: var(--white);*/
           background: #F4EEE3;
           color: #382423;
-          /* color: var(--white);*/
+
         }
 
         .card-bottom-product-infos p {
           margin: 0;
         }
 
-      /*.card-bottom:hover {
-        background: var(--primary);
-        }*/
+
 
         .center {
           display: flex;

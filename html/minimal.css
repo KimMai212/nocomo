@@ -1,10 +1,12 @@
 :root {
-  --primary: #CB997E;
-  --secondary: #EDDCD2;
-  --secondary-light: #aaa;
-  --grey: #666;
-  --grey-light: #B7B7A4;
-  --white: #FFF1E6;
+  --primary: #028090!important;
+  --primary-light: #CAFFBF!important;
+  --secondary: #00A896!important;
+  --grey: #ADB5BD!important;
+  --grey-light: #DEE2E6!important;
+  --grey-dark: #6C757D!important;
+  --dark: #131418!important;
+  --white: #fff!important;
 }
 
 body {
@@ -81,14 +83,14 @@ h3.logo {
 }
 .banner h1 {
   margin: 0;
-  color: var(--primary);
+  color: var(--grey-dark);
   font-size: 32px;
   font-weight: bold;
 }
 
 /* Main Heading */
 .main-heading {
-  color: var(--primary);
+  color: var(--grey-dark);
   text-align: center;
   font-size: 48px;
   line-height: 1.2;
@@ -100,6 +102,7 @@ h3.logo {
   text-align: center;
   font-size: 18px;
   line-height: 1.2;
+  color: var(--grey-dark);
 }
 
 /* Button */
@@ -111,7 +114,7 @@ h3.logo {
 
 .btn {
   padding: 20px 60px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-color: var(--secondary);
   text-decoration: none;
   color: var(--white);
@@ -120,7 +123,7 @@ h3.logo {
 }
 
 .btn:hover {
-  background-color: var(--secondary-light);
+  /*background-color: var(--secondary-light);*/
 }
 
 /* Cards */
@@ -175,7 +178,7 @@ h3.logo {
 
 .card-long {
   overflow: hidden;
-  background: white;
+  background-color: var(--white);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -195,6 +198,7 @@ h3.logo {
   font-weight: bold;
   margin: 0;
   font-weight: 700;
+  color: var(--grey);
 }
 
 .card-long .card-product-infos {
@@ -203,22 +207,24 @@ h3.logo {
 }
 
 footer {
-  background: var(--grey-light);
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: var(--grey);
+  color: var(--white);
 }
 
 .footer-links {
   display: flex;
   align-items: center;
+  font-color: var(--white);
+
 }
 
 .footer-links a {
-  color: var(--grey);
+  color: var(--white);
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
