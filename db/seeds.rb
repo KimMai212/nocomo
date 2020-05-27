@@ -89,12 +89,6 @@ Color.create!(
   css: File.read("html/colors/dark-color.css")
 )
 
-puts "Creating rainbow colors"
-Color.create!(
-  name: "Rainbow",
-  css: File.read("html/colors/rainbow-color.css")
-)
-
 puts "Creating grey colors"
 Color.create!(
   name: "Grey",
@@ -118,6 +112,17 @@ bright_color = Color.create!(
   name: "Bright",
   css: File.read("html/colors/bright-color.css")
   )
+  puts "Creating neon colors"
+Color.create!(
+  name: "Neon tones",
+  css: File.read("html/colors/neon-colors.css")
+)
+
+puts "Creating rainbow colors"
+Color.create!(
+  name: "Rainbow",
+  css: File.read("html/colors/rainbow-color.css")
+)
 
 puts "Assigning bright colors to the project"
 project.color = bright_color
