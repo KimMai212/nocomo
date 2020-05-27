@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[new update preview]
-  skip_before_action :verify_authenticity_token, only: :update
+  skip_before_action :authenticate_user!, only: %i[new update preview generate]
+  skip_before_action :verify_authenticity_token, only: %i[update generate]
 
   def new
     if params[:project_id].present?
@@ -49,6 +49,15 @@ class ProjectsController < ApplicationController
     @html = builder.build
     render :layout => false
   end
+  def generate 
+    @preview = Project.find(params[:projectid])
+    builder = LayoutBuilder.new(@preview)
+    @html = builder.build
+
+    pdf = WickedPdf.new.pdf_from_string(@html)
+    send_data pdf, :disposition => 'attachment', :filename=>"layout.pdf"
+
+  end
 
   private
   def project_params
@@ -56,6 +65,6 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:layout_id, :design_id, :font_id, :color_id, :placeholder_id)
   end
   def font_params
-    params.require(:font).permit(:heading, :paragraph)
+    params.require(:font).permit(:heading, :paragraph, :iframe)
   end
 end

@@ -1,3 +1,7 @@
+<div class="login-container justify-content-center">
+  <div class="row justify-content-center">
+    <div id="login" class="col-md-4 m-auto">
+      <div class="col-md-12">
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -12,9 +16,13 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="form-actions m-auto">
+  <%= f.button :submit, "Log in", class: "btn btn-primary mb-3" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+      </div>
+    </div>
+   </div>
+</div>

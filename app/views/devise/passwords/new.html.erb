@@ -1,3 +1,7 @@
+<div class="login-container justify-content-center">
+  <div class="row justify-content-center">
+    <div id="login" class="col-md-4 m-auto d-justify-content-center">
+      <div class="col-md-12 m-auto">
 <h2>Forgot your password?</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -11,8 +15,13 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+  
+    <%= f.button :submit,  "Reset Password " , class: "btn btn-primary mb-3" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+</div>
