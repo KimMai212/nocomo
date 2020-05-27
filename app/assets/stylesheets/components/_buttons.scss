@@ -1,0 +1,15 @@
+.btn {
+  &.btn-primary {
+    border-color: $yellow;
+    background-color: $yellow;
+  }
+  &.btn-secondary {
+    background-color: transparent;
+    color: $yellow;
+    border-color: $yellow;
+    &:hover {
+      background-color: $yellow;
+      color: #fff;
+    }
+  }
+}

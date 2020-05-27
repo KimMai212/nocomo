@@ -1,0 +1,5 @@
+meta_product_name: "NoCoMo;"
+meta_title: "NoCoMo; – Your 3 minute mockup builder"
+meta_description: "Build quick yet clean website mockups with NoCoMo;"
+meta_image: "nocomo-logo.svg" # should exist in `app/assets/images/`
+twitter_account: "@nocomo"   # required for Twitter Cards
