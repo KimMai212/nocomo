@@ -77,16 +77,16 @@ project.design = corporate_design
 # ---------------------------------------------------
 #  Create Color
 
-puts "Creating earth colors"
-Color.create!(
-  name: "Earth tones",
-  css: File.read("html/colors/earth-tones-color.css")
+puts "Creating minimal colors"
+minimal_color = Color.create!(
+  name: "Minimal",
+  css: File.read("html/colors/minimal-color.css")
 )
 
-puts "Creating dark colors"
+puts "Creating red colors"
 Color.create!(
-  name: "Dark",
-  css: File.read("html/colors/dark-color.css")
+  name: "Reds",
+  css: File.read("html/colors/reds-color.css")
 )
 
 puts "Creating grey colors"
@@ -95,37 +95,38 @@ Color.create!(
   css: File.read("html/colors/grey-color.css")
 )
 
+puts "Creating dark colors"
+Color.create!(
+  name: "Dark",
+  css: File.read("html/colors/dark-color.css")
+)
+
+puts "Creating bright colors"
+Color.create!(
+  name: "Bright",
+  css: File.read("html/colors/bright-color.css")
+)
+
+puts "Creating earth colors"
+Color.create!(
+  name: "Earth tones",
+  css: File.read("html/colors/earth-tones-color.css")
+)
+
 puts "Creating awesome colors"
 Color.create!(
   name: "Awesome colours",
   css: File.read("html/colors/awesome-color.css")
 )
 
-puts "Creating minimal colors"
+puts "Creating neon colors"
 Color.create!(
-  name: "Minimal",
-  css: File.read("html/colors/minimal-color.css")
-)
-
-puts "Creating bright colors"
-bright_color = Color.create!(
-  name: "Bright",
-  css: File.read("html/colors/bright-color.css")
-  )
-  puts "Creating neon colors"
-Color.create!(
-  name: "Neon tones",
+  name: "Patry Patrick",
   css: File.read("html/colors/neon-colors.css")
 )
 
-puts "Creating rainbow colors"
-Color.create!(
-  name: "Rainbow",
-  css: File.read("html/colors/rainbow-color.css")
-)
-
-puts "Assigning bright colors to the project"
-project.color = bright_color
+puts "Assigning minimal colors to the project"
+project.color = minimal_color
 
 # ---------------------------------------------------
 #  Create Font
