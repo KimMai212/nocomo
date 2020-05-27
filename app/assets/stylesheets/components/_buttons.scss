@@ -2,6 +2,10 @@
   &.btn-primary {
     border-color: $yellow;
     background-color: $yellow;
+    &:hover {
+      background-color: lighten($yellow, 20%);
+      border-color: lighten($yellow, 20%);
+    }
   }
   &.btn-secondary {
     background-color: transparent;
