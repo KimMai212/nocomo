@@ -37,15 +37,6 @@ h3.logo {
   padding: 0 50px;
 }
 
-/*footer {
-  width: 100%;
-  margin: 60px 0 0;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--primary);
-  padding: 50px 0;
-}*/
-
 .row.flex {
   display: flex;
 }
@@ -202,7 +193,7 @@ h3.logo {
 
 /* New Shop */
 
- .footer {
+.footer {
   margin-top: 100px;
   background: #D27675;
   display: flex;
@@ -212,176 +203,168 @@ h3.logo {
   padding: 0px 50px;
   color: black;
 }
-      .footer-links {
-        display: flex;
-        align-items: center;
-      }
-      .footer-links a {
-        color: white;
-        opacity: 0.6;
-        text-decoration: none;
-        font-size: 24px;
-        padding: 0px 10px;
-      }
-      .footer-links a:hover {
-        opacity: 1;
-      }
-      .footer .fa-heart {
-        color: #D23333;
-    }
-
-     .banner h2 {
-      color: white;
-      opacity: 60%;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-      margin-top: -10px;
-       }
-
-    .card {
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 60%;
-      background-color: #F4EEE3;
-      color: white;
-      margin-top: 24px;
-      }
-
-    .card img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 4px;
-      font-family: 'Balsamiq Sans';
-      color: #382423;
-    }
-
-    .card p {
-      font-size: 14px;
-      line-height: 1.4;
-      opacity: .7;
-      margin-bottom: 4px;
-      margin-top: 4px;
-      color: #382423;
-    }
-
-      .banner-title {
-      position: center;
-      margin-left: 100px;
-      margin-top: auto;
-    }
-
-    .middle-cards {
-      display: flex;
-      flex-direction: row;
-
-      height: 300px;
-
-      margin: auto;
-      justify-content: center;
-    }
-
-    .middle-image {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .card-middle-big {
-      display: flex;
-      width: 50%;
-      flex-direction: column;
-      padding: 15px;
-    }
-
-    .card-middle-right {
-      justify-content: space-between;
-    }
-
-    .card-middle {
-      max-height: 120px;
-    }
-
-    .content {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-       margin: 20px;
-        padding: 30px;
-        background-color: #F4EEE3;
-        border-radius: 2px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 30%;
-    }
-    hr {
-      height: 1px;
-      max-width: 60%;
-      margin: auto ;
-      margin-top:80px;
-      margin-bottom: 80px;
-
-    }
-
-    /* New Photo */
-
-    .card-photo {
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #F4EEE3;
-      color: white;
-      margin-top: 24px;
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
 }
 
-    /* New Business */
+.banner h2 {
+  color: white;
+  opacity: 60%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: -10px;
+}
 
-     .row {
-        display: flex;
-        margin-right: 0px;
-        margin-left: 0px;
-      }
+.card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  background-color: #F4EEE3;
+  color: white;
+  margin-top: 24px;
+}
 
-      .col-6 p {
-        font-size: 18px;
-        line-height: 1,5px;
-      }
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 4px;
+  color: #382423;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  color: #382423;
+}
+
+.banner-title {
+  position: center;
+  margin-left: 100px;
+  margin-top: auto;
+}
+
+.middle-cards {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  margin: auto;
+  justify-content: center;
+}
+
+.middle-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-middle-big {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card-middle-right {
+  justify-content: space-between;
+}
+
+.card-middle {
+  max-height: 120px;
+}
+
+.content {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 30px;
+  background-color: #F4EEE3;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+}
+
+hr {
+  height: 1px;
+  max-width: 60%;
+  margin: auto ;
+  margin-top:80px;
+  margin-bottom: 80px;
+
+}
+
+/* New Photo */
+
+.card-photo {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F4EEE3;
+  color: white;
+  margin-top: 24px;
+}
+
+/* New Business */
+
+.row {
+  display: flex;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.col-6 p {
+  font-size: 18px;
+  line-height: 1,5px;
+}
+
+#business nav div {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
 
 
-      .bottom-wrap p {
-        font-size: 20px;
-        line-height: 1,7px;
-      }
+/* Blog layout */
 
-      #business nav div {
-        width: 100%;
-        max-width: 900px;
-        margin: auto;
-        text-align: left;
-      }
+.big-article {
+  max-width: auto;
+}
 
-
-       /* Blog layout */
-
-        .big-article {
-        max-width: auto;
-      }
-
-      .big-card {
-        border-radius: 5px;
-        margin: 20px;
-        width: auto;
-        overflow: hidden;
+.big-card {
+  border-radius: 5px;
+  margin: 20px;
+  width: auto;
+  overflow: hidden;
         /*background: var(--primary-light);
         color: var(--white);*/
         display: flex;
@@ -397,7 +380,7 @@ h3.logo {
         margin: auto;
       }
 
-       .card p {
+      .card p {
         font-size: 16px;
         line-height: 1.4;
         opacity: .7;
@@ -405,7 +388,7 @@ h3.logo {
         margin-top: 8px;
       }
 
-       .big-card .card-product-infos {
+      .big-card .card-product-infos {
         padding: 20px 40px 0;
       }
 
@@ -417,47 +400,47 @@ h3.logo {
 
       /*.big-card:hover {
         background: var(--primary);
-      }*/
+        }*/
 
-      .card-bottom {
-        /*color: var(--white);*/
-        border-radius: 5px;
-        overflow: hidden;
-        background: #F4EEE3;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        max-width: 100%;
-        max-height: 250px;
-        margin: 20px;
-      }
+        .card-bottom {
+          /*color: var(--white);*/
+          border-radius: 5px;
+          overflow: hidden;
+          background: #F4EEE3;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          max-width: 100%;
+          max-height: 250px;
+          margin: 20px;
+        }
 
-      .card-bottom-product-infos {
-        padding: 20px;
-        /*color: var(--white);*/
-        background: #F4EEE3;
-        color: #382423;
-       /* color: var(--white);*/
-      }
+        .card-bottom-product-infos {
+          padding: 20px;
+          /*color: var(--white);*/
+          background: #F4EEE3;
+          color: #382423;
+          /* color: var(--white);*/
+        }
 
-      .card-bottom-product-infos p {
-        margin: 0;
-      }
+        .card-bottom-product-infos p {
+          margin: 0;
+        }
 
       /*.card-bottom:hover {
         background: var(--primary);
-      }*/
+        }*/
 
-      .center {
-        display: flex;
-        flex-direction: row;
-      }
+        .center {
+          display: flex;
+          flex-direction: row;
+        }
 
-       .content:hover {
-        background: var(--primary);
-      }
-      .content p {
-        font-size: 25px;
-      }
+        .content:hover {
+          background: var(--primary);
+        }
+        .content p {
+          font-size: 25px;
+        }
 
 
