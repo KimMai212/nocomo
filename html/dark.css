@@ -1,12 +1,12 @@
 :root {
-  --primary: #25272B;
-  --primary-light: #35373B;
-  --secondary: #e5e5e5;
-  --grey: #999;
-  --grey-light: #ccc;
-  --grey-dark: #333;
-  --white: #fff;
-  --dark: #131418;
+  --primary: #028090!important;
+  --primary-light: #CAFFBF!important;
+  --secondary: #00A896!important;
+  --grey: #ADB5BD!important;
+  --grey-light: #DEE2E6!important;
+  --grey-dark: #6C757D!important;
+  --dark: #131418!important;
+  --white: #fff!important;
 }
 
 /* Main styling */
@@ -22,7 +22,7 @@ nav {
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  background-color:var(--primary);
+  background-color: var(--dark);
   height: 40px;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@ nav {
 .banner h1 {
   margin: 0;
   text-align: center;
-  color: var(--secondary);
+  color: var(--white);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -82,21 +82,22 @@ nav {
 /* Paragraph */
 p,
 .btn {
-  color: var(--secondary);
   font-size: 18px;
   line-height: 1.2;
+  color: var(--grey-light);
 }
 .paragraph {
   text-align: center;
+  color: var(--secondary);
 }
 
 /* Button */
 
 .btn {
-  color: var(--secondary);
+  color: var(--grey-dark);
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: var(--primary-light);
+  background-color: var(--grey-light);
   border-radius: 5px;
   text-decoration: none;
   transition: all .3s;
@@ -104,7 +105,7 @@ p,
 }
 
 .btn:hover {
-  background-color: var(--primary-light);
+  background-color: var(--grey-light);
   opacity: 50%;
 }
 
@@ -168,7 +169,7 @@ p,
 }
 
 .card:hover {
-  background: var(--primary-light);
+  background: var(--grey-dark);
 }
 
 .card img {
@@ -200,6 +201,7 @@ p,
 .card-long {
   overflow: hidden;
   background: var(--primary);
+  color: var(--grey-light);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -219,11 +221,13 @@ p,
   font-weight: bold;
   margin: 0;
   font-weight: 700;
+  color: var(--grey-light);
 }
 
 .card-long .card-product-infos {
   padding: 20px 64px 20px;
   vertical-align: baseline;
+  font-color: var(--grey-light);
 }
 
 .big-article {
@@ -235,8 +239,8 @@ p,
   margin: 20px;
   width: auto;
   overflow: hidden;
-  background: var(--secondary);
-  color: var(--primary-light);
+  background: var(--primary);
+  color: var(--grey-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,6 +248,7 @@ p,
 
 .big-card .card-product-infos {
   padding: 20px 40px 0;
+  color: var(--grey-light);
 }
 
 .big-card img {
@@ -253,14 +258,14 @@ p,
 }
 
 .big-card:hover {
-  background: var(--primary);
+  background: var(--grey-dark);
 }
 
 .card-bottom {
-  color: var(--primary-light);
+  background: var(--primary);
+  color: var(--grey-light);
   border-radius: 5px;
   overflow: hidden;
-  background: var(--secondary);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -271,15 +276,16 @@ p,
 
 .card-bottom-product-infos {
   padding: 20px;
-  color: var(--primary-light);
+  color: var(--grey-light);
 }
 
 .card-bottom-product-infos p {
   margin: 0;
+  color: var(--grey-light);
 }
 
 .card-bottom:hover {
-  background: var(--primary);
+  background: var(--grey-dark);
 }
 
 .center {
@@ -297,13 +303,13 @@ p,
 }
 
 .card-bottom-product-infos:hover {
-  background: var(--secondary);
+  background: var(--grey-dark);
 }
 
 .content {
   margin: 20px;
   padding: 30px;
-  background-color: var(--primary-light);
+  background-color: var(--secondary);
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -312,6 +318,7 @@ p,
   text-align: center;
   line-height: 1.5;
   font-size: 25px;
+  color: var(--grey-light);
 }
 
 .content:hover {
@@ -319,6 +326,7 @@ p,
 }
 .content p {
   font-size: 25px;
+  color: var(--grey-light);
 }
 
 hr {
@@ -326,6 +334,7 @@ hr {
   width: 30%;
   margin-top: 75px;
   margin-bottom: 75px;
+  color: var(--grey-light);
 }
 
 footer {
