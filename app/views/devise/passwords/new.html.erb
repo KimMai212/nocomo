@@ -1,19 +1,28 @@
-<% content_for :title, "Forgot password" %>
-<h2>Forgot your password?</h2>
+<% content_for :meta_title, "Forgot password" %>
+<div class="login-container justify-content-center">
+  <div class="row justify-content-center">
+    <div id="login" class="col-md-4 m-auto d-justify-content-center">
+      <div class="col-md-12 m-auto">
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+        <h2>Forgot your password?</h2>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :email,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "email" } %>
+        </div>
+        <div class="form-actions">
+          
+          <%= f.button :submit,  "Reset Password " , class: "btn btn-primary mb-3" %>
+        </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

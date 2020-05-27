@@ -1,4 +1,4 @@
-<% content_for :title, "Generate your mockup" %>
+<% content_for :meta_title, "Generate your mockup" %>
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-sm-12 col-md-4 col-lg-4">
@@ -96,7 +96,11 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
-      <iframe id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
+      <form action="/generatepdf" method="post" remote="true">
+        <input id="generatepdf" type="submit" name="commit" value="Save as PDF" class="btn btn-outline-info " >
+        <input hidden name="projectid" value="<%= @project.id  %>" class="btn btn-primary">
+        <iframe name="iframe" id="preview" src="<%= preview_path(@project) %>" frameborder="0"></iframe>
+      </form>
     </div>
   </div>
 </div>
