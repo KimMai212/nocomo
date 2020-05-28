@@ -1,8 +1,7 @@
 <% content_for :meta_title, "Login" %>
-<div class="login-container justify-content-center">
-  <div class="row justify-content-center">
-    <div id="login" class="col-md-4 m-auto">
-      <div class="col-md-12">
+<div class="login-container container justify-content-center d-flex align-items-center">
+  <div class="row col-md-5 m-auto justify-content-center">
+    <div id="login" class="col-md-12 m-auto devise-container">
         <h2>Log in</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,7 +22,6 @@
         <% end %>
 
         <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
 </div>

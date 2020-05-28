@@ -1,9 +1,7 @@
 <% content_for :meta_title, "Forgot password" %>
-<div class="login-container justify-content-center">
-  <div class="row justify-content-center">
-    <div id="login" class="col-md-4 m-auto d-justify-content-center">
-      <div class="col-md-12 m-auto">
-
+<div class="login-container container d-flex align-items-center justify-content-center">
+  <div class="row col-md-5 justify-content-center">
+    <div id="login" class="col-md-12 m-auto d-justify-content-center devise-container">
         <h2>Forgot your password?</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -16,13 +14,12 @@
           input_html: { autocomplete: "email" } %>
         </div>
         <div class="form-actions">
-          
+
           <%= f.button :submit,  "Reset Password " , class: "btn btn-primary mb-3" %>
         </div>
         <% end %>
 
         <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
 </div>

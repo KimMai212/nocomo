@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'imgkit'
+gem 'wkhtmltoimage-binary'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

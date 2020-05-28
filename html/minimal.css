@@ -15,6 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--white);
+  overflow: hidden;
 }
 
 hr {
@@ -202,7 +203,7 @@ h3.logo {
   font-weight: bold;
   margin: 0;
   font-weight: 700;
-  color: var(--grey);
+  color: var(--dark);
 }
 
 .card-long .card-product-infos {

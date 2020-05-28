@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/generate", to: "projects#new"
   get "/generate/:project_id/preview", to: "projects#preview", as: "preview"
   get "/dashboard", to: "dashboards#index"
+  get "/generate/:project_id/jpg", to: "projects#jpg", as: "jpg"
   post "/generatepdf", to: "projects#generate"
 
 end

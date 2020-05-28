@@ -14,9 +14,6 @@ class StyleBuilder
     html = "<style>"
     html += import_font
     html += @project.design.css + "\n"
-    # still to do font heading and paragraph overwrite
-    # html += @project.font.heading + "\n"
-    # still to do colors
     html += <<~CSS
       h1, h2, h3, h4, h5 {
         font-family: #{heading};
