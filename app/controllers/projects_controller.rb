@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[new update preview generate]
-  skip_before_action :verify_authenticity_token, only: %i[update generate]
+  skip_before_action :authenticate_user!, only: %i[new update preview generate jpg]
+  skip_before_action :verify_authenticity_token, only: %i[update generate jpg]
 
   def new
     if params[:project_id].present?
@@ -48,6 +48,16 @@ class ProjectsController < ApplicationController
     builder = LayoutBuilder.new(@preview)
     @html = builder.build
     render :layout => false
+  end
+
+  def jpg
+    @project = Project.find(params[:project_id])
+    @kit = IMGKit.new('https://google.com')
+    path = "app/assets/images/projects/project-#{params[:project_id]}.jpeg"
+    file = @kit.to_file(path)
+    send_data(file, type: "image/jpeg", filename: "project-#{params[:project_id]}.jpg")
+
+    # redirect_to generate_path(project_id: @project.id)
   end
 
   # def generate

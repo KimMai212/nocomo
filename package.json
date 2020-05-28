@@ -7,7 +7,9 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.1.1",
     "bootstrap": "^4.5.0",
+    "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.5.1",
+    "phantomjs": "^2.1.7",
     "popper.js": "^1.16.1",
     "siema": "^1.5.1",
     "turbolinks": "^5.2.0"

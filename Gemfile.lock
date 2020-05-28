@@ -95,6 +95,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    imgkit (1.6.2)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     json (2.3.0)
@@ -232,6 +233,7 @@ GEM
     websocket-extensions (0.1.4)
     wicked_pdf (2.0.2)
       activesupport
+    wkhtmltoimage-binary (0.12.5)
     wkhtmltopdf-binary (0.12.5.4)
     zeitwerk (2.3.0)
 
@@ -245,6 +247,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 5.12.0)
+  imgkit
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
@@ -261,6 +264,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webpacker
   wicked_pdf
+  wkhtmltoimage-binary
   wkhtmltopdf-binary
 
 RUBY VERSION

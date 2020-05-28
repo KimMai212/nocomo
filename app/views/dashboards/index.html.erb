@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container justify-content-between d-flex flex-column">
   <div class="row justify-content-center">
     <div id="dashboard" class="col col-md-10">
       <div class="header">
@@ -11,24 +11,28 @@
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Saved Layouts</a>
           </li>
           <li class="nav-dash">
-          <%= link_to "Create your new project!", generate_path, class: "nav-link active" %>
+            <%= link_to "Create your new project!", generate_path, class: "nav-link active" %>
           </li>
         </ul>
       </div>
-      <hr>
       <% unless @projects.empty? %>
-          <div class="m-auto row iframe-container">
+        <div class="mx-auto mt-5 row iframe-container justify-content-center">
           <% @projects.each do |p| %>
             <div class="card col-xs-12 col-md-6 col-lg-4">
-              <iframe scrolling="no" class="card-iframe-thumbnail" 
-              src="<%= preview_path(p) %>" frameborder="0"></iframe>
-              </div>
-            <% end %>
-      <% else %>
-      <h1 > No saved projects </h1>
+              <iframe scrolling="no" class="card-iframe-thumbnail" src="<%= preview_path(p) %>" frameborder="0"></iframe>
+            </div>
+          </div>
+          <% end %>
+        <% else %>
+        <div class="mx-auto mt-5 row iframe-container justify-content-center">
+          <h3 class="text-center">No saved projects</h3>
+        </div>
       <% end %>
     </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-md-10">
+      <%= link_to "< Back", generate_path %>
     </div>
   </div>
 </div>
-<%= link_to "< Back", generate_path %>
