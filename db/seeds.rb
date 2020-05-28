@@ -103,7 +103,7 @@ Color.create!(
 
 puts "Creating bright colors"
 Color.create!(
-  name: "Bright",
+  name: "Neutrals",
   css: File.read("html/colors/bright-color.css")
 )
 
