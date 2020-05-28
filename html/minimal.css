@@ -1,12 +1,9 @@
 :root {
-  --primary: #028090!important;
-  --primary-light: #CAFFBF!important;
-  --secondary: #00A896!important;
-  --grey: #ADB5BD!important;
-  --grey-light: #DEE2E6!important;
-  --grey-dark: #6C757D!important;
-  --dark: #131418!important;
+  --primary: #666!important;
+  --primary-light: #ccc!important;
+  --grey: #ccc!important;
   --white: #fff!important;
+  --dark: #222!important;
 }
 
 body {
@@ -14,7 +11,6 @@ body {
   margin: 0;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
   overflow: hidden;
 }
 
@@ -50,12 +46,13 @@ h3.logo {
 .main {
   max-width: 780px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
+
 .main.photo {
     max-width: none;
     padding: 0;
-  }
+}
 
 .container {
   max-width: 900px;
@@ -65,6 +62,7 @@ h3.logo {
 
 .row.flex {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .col-6 {
@@ -88,14 +86,14 @@ h3.logo {
 }
 .banner h1 {
   margin: 0;
-  color: var(--grey-dark);
+  color: var(--dark);
   font-size: 32px;
   font-weight: bold;
 }
 
 /* Main Heading */
 .main-heading {
-  color: var(--grey-dark);
+  color: var(--primary);
   text-align: center;
   font-size: 48px;
   line-height: 1.2;
@@ -107,7 +105,7 @@ h3.logo {
   text-align: center;
   font-size: 18px;
   line-height: 1.2;
-  color: var(--grey-dark);
+  color: var(--dark);
 }
 
 /* Button */
@@ -120,7 +118,7 @@ h3.logo {
 .btn {
   padding: 20px 60px;
   background-color: var(--primary);
-  border-color: var(--secondary);
+  border-color: var(--primary);
   text-decoration: none;
   color: var(--white);
   transition: all .3s;
@@ -172,7 +170,8 @@ h3.logo {
   align-items: center;
 }
 
-.card-photo img {
+.card-photo img,
+.card-wrapper .card img {
   width: 100%;
 }
 
@@ -183,7 +182,6 @@ h3.logo {
 
 .card-long {
   overflow: hidden;
-  background-color: var(--white);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -249,8 +247,7 @@ footer {
 .footer-links {
   display: flex;
   align-items: center;
-  font-color: var(--white);
-
+  color: var(--white);
 }
 
 .footer-links a {

@@ -83,39 +83,27 @@ minimal_color = Color.create!(
   css: File.read("html/colors/minimal-color.css")
 )
 
-puts "Creating red colors"
+puts "Creating light colors"
 Color.create!(
-  name: "Reds",
-  css: File.read("html/colors/reds-color.css")
+  name: "Light",
+  css: File.read("html/colors/light-color.css")
 )
 
-puts "Creating grey colors"
+puts "Creating natural colors"
 Color.create!(
-  name: "Grey",
-  css: File.read("html/colors/grey-color.css")
+  name: "Natural",
+  css: File.read("html/colors/natural-color.css")
 )
 
 puts "Creating dark colors"
 Color.create!(
-  name: "Dark",
+  name: "Violet",
   css: File.read("html/colors/dark-color.css")
-)
-
-puts "Creating bright colors"
-Color.create!(
-  name: "Neutrals",
-  css: File.read("html/colors/bright-color.css")
-)
-
-puts "Creating earth colors"
-Color.create!(
-  name: "Earth tones",
-  css: File.read("html/colors/earth-tones-color.css")
 )
 
 puts "Creating awesome colors"
 Color.create!(
-  name: "Awesome colours",
+  name: "2016",
   css: File.read("html/colors/awesome-color.css")
 )
 

@@ -1,10 +1,7 @@
 :root {
   --primary: #028090!important;
   --primary-light: #CAFFBF!important;
-  --secondary: #00A896!important;
-  --grey: #ADB5BD!important;
-  --grey-light: #DEE2E6!important;
-  --grey-dark: #6C757D!important;
+  --grey: #DEE2E6!important;
   --dark: #131418!important;
   --white: #fff!important;
 }
@@ -48,9 +45,11 @@ h3.logo {
 .col-6 {
   width: 50%;
 }
+
 .col-6:first-child {
   padding-right: 15px;
 }
+
 .col-6:last-child {
   padding-left: 15px;
 }
@@ -62,12 +61,13 @@ h3.logo {
   padding: 150px 50px;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);
   text-align: center;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   margin-bottom: 60px;
 }
+
 .banner h1 {
   margin: 0;
-  color: white;
+  color: var(--white);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 44px;
   font-weight: bold;
@@ -76,7 +76,7 @@ h3.logo {
 
 /* Main Heading */
 .main-heading {
-  color: var(--black);
+  color: var(--primary);
   text-align: center;
   font-size: 48px;
   line-height: 1.2;
@@ -88,10 +88,12 @@ h3.logo {
 h1 {
   color: var(--primary);
 }
-.paragraph {
+
+p {
   text-align: left;
   font-size: 18px;
   line-height: 1.2;
+  color: var(--dark);
 }
 
 /* Button */
@@ -159,6 +161,10 @@ h1 {
   margin-right: 0;
 }
 
+.card-wrapper.shop .card img {
+  height: auto;
+}
+
 .card,
 .card-long {
   overflow: hidden;
@@ -190,7 +196,7 @@ h1 {
 }
 
 .card-long .card-product-infos {
-  padding: 10px 64px 20px;
+  padding: 30px 60px 30px;
 }
 
 .card .card-product-infos {
@@ -207,14 +213,14 @@ footer {
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: black;
+  color: var(--white);
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: white;
+  color: var(--white);
   opacity: 0.6;
   text-decoration: none;
   font-size: 24px;
@@ -223,12 +229,12 @@ footer {
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: var(--grey-light);
+footer .fa-heart {
+  color: var(--grey);
 }
 
 .banner h2 {
-  color: white;
+  color: var(--white);
   opacity: 60%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   margin-top: -10px;
@@ -236,14 +242,13 @@ footer {
 
 .card {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 60%;
-  background-color: var(--grey-light);
-  color: white;
+  background-color: var(--grey);
+  color: var(--dark);
   margin-top: 24px;
 }
 
@@ -256,8 +261,8 @@ footer {
 .card h3 {
   font-size: 24px;
   font-weight: bold;
-  margin: 4px;
-  color: var(--primary);
+  margin: 4px 0;
+  color: var(--dark);
 }
 
 .card p {
@@ -267,12 +272,6 @@ footer {
   margin-bottom: 4px;
   margin-top: 4px;
   color: var(--dark);
-}
-
-.banner-title {
-  position: center;
-  margin-left: 100px;
-  margin-top: auto;
 }
 
 .middle-cards {
@@ -317,13 +316,38 @@ footer {
   color: var(--white);
 }
 
+.category-wrap {
+  display: flex;
+}
+
+.category {
+  width: 50%;
+  color: var(--white);
+}
+
+.category .banner {
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 0;
+}
+
+.category-big .banner {
+  height: 300px;
+}
+
 hr {
   height: 1px;
-  max-width: 60%;
-  margin: auto ;
+  background-color: var(--primary-light);
+  border: none;
+  width: 60%;
+  margin: auto;
   margin-top:80px;
   margin-bottom: 80px;
-
 }
 
 /* New Photo */
@@ -334,7 +358,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary);
+  background-color: var(--primary-light);
   color: var(--dark);
   margin-top: 24px;
 }
@@ -359,7 +383,6 @@ hr {
   text-align: left;
 }
 
-
 /* Blog layout */
 
 .big-article {
@@ -380,7 +403,8 @@ hr {
 
 .text--center {
   text-align: center;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card p {
@@ -401,9 +425,7 @@ hr {
   object-fit: cover;
 }
 
-
 .card-bottom {
-  /*color: var(--white);*/
   border-radius: 5px;
   overflow: hidden;
   background-color: var(--primary);
@@ -417,7 +439,7 @@ hr {
 
 .card-bottom-product-infos {
   padding: 20px;
-  background: var(--grey-light);
+  background: var(--grey);
   color: var(--dark);
 
 }
@@ -425,8 +447,6 @@ hr {
 .card-bottom-product-infos p {
   margin: 0;
 }
-
-
 
 .center {
   display: flex;
