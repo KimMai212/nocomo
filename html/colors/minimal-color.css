@@ -1,8 +1,7 @@
 :root {
-  --primary: #a3c6c4!important;
-  --primary-light: #EEDCD3!important;
-  --grey-light: #dbb2b2!important;
-  --grey-dark: #c8bbbbe8!important;
-  --dark: #222222!important;
-
+  --primary: #666!important;
+  --primary-light: #ccc!important;
+  --grey: #ccc!important;
+  --dark: #222!important;
+  --white: #fff!important;
 }
