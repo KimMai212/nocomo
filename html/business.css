@@ -173,7 +173,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  max-height: 300px;
   border-radius: 3px;
 }
 
@@ -185,7 +185,6 @@ p {
 
 .card-long img,
 .card img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -250,12 +249,6 @@ footer .fa-heart {
   background-color: var(--grey);
   color: var(--dark);
   margin-top: 24px;
-}
-
-.card img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 .card h3 {
@@ -428,20 +421,18 @@ hr {
 .card-bottom {
   border-radius: 5px;
   overflow: hidden;
-  background-color: var(--primary);
+  background: var(--grey);
   display: flex;
   flex-direction: row;
   align-items: center;
   max-width: 100%;
-  max-height: 250px;
+  max-height: 300px;
   margin: 20px;
 }
 
 .card-bottom-product-infos {
   padding: 20px;
-  background: var(--grey);
   color: var(--dark);
-
 }
 
 .card-bottom-product-infos p {
