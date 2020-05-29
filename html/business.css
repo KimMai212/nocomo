@@ -173,7 +173,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 300px;
   border-radius: 3px;
 }
 
@@ -181,6 +180,7 @@ p {
   flex-direction: row;
   margin-bottom: 140px;
   max-width: none;
+  max-height: 300px;
 }
 
 .card-long img,
@@ -444,11 +444,6 @@ hr {
   flex-direction: row;
 }
 
-.content:hover {
-  background: var(--primary);
-}
 .content p {
   font-size: 25px;
 }
-
-
